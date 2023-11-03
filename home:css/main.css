@@ -12,7 +12,7 @@ main{
     bottom: 0;
 }
 .home {
-    background-image: url("/assets/images/cake2/1292924.jpg");
+    background-image: url("../assets/images/cake2/1292924.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,7 +27,7 @@ main{
     position: relative;
 }
 .saleoff {
-    background-image: url("/assets/images/cake2/145-cake-dessert-strawberry-spoon-dark-4k.jpg");
+    background-image: url("../assets/images/cake2/145-cake-dessert-strawberry-spoon-dark-4k.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,7 +40,7 @@ main{
     position: relative;
 }
 .about {
-    background-image: url("/assets/images/cake2/choco-cake-food.jpg");
+    background-image: url("../assets/images/cake2/choco-cake-food.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
