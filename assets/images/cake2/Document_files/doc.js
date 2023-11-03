@@ -47,14 +47,14 @@
 // console.log(minNumber())
 
 //Bai6//
-function isInteger(number){
-    const a = +prompt('nhap so bat ky')
-    if (a>0) {
-        Number.isInteger(a)
-        return Number.isInteger(a)
-    }else{
-        alert('nhap lai')
-        return
-    }
-}
-console.log(isInteger())
+// function isInteger(number){
+//     const a = +prompt('nhap so bat ky')
+//     if (a>0) {
+//         Number.isInteger(a)
+//         return Number.isInteger(a)
+//     }else{
+//         alert('nhap lai')
+//         return
+//     }
+// }
+// console.log(isInteger())
