@@ -1,0 +1,387 @@
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.home {
+    background-image: url("/assets/images/cake2/1292924.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.saleoff {
+    background-image: url("/assets/images/cake2/145-cake-dessert-strawberry-spoon-dark-4k.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    position: relative;
+}
+.about {
+    background-image: url("/assets/images/cake2/choco-cake-food.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    position: relative;
+}
+.home .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    flex-direction: column;
+    background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
+}
+.saleoff .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
+}
+.about .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    background: linear-gradient(90deg, rgba(0,0,0,0.9), rgba(0,0,0,0.5));
+}
+
+/* Home */
+.home .overlay img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.home .overlay h1 {
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 120px;
+    color: #fff;
+    margin: 50px 0;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+}
+.home .overlay h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-top: 20px;
+}
+.home .overlay p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: #FFF;
+    width: 45%;
+    text-align: center;
+    text-shadow: 3px 3px 9px rgba(0, 0, 0, 0.9);
+    font-weight: 600;
+    margin-bottom: 90px;
+}
+/* Home */
+
+/* Sale off */
+.saleoff .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.saleoff .overlay .sale__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+.saleoff .overlay .sale__group .sale1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--primary);
+    padding: 40px 40px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-shadow: 3px 3px 9px rgba(0, 0, 0, 0.7);
+    transition: 0.2s;
+}
+.saleoff .overlay .sale__group .sale1:hover {
+    transform: scale(1.09);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.saleoff .overlay .sale__group .sale1 h1 {
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 300;
+}
+.saleoff .overlay .sale__group .sale1 h2 {
+    padding: 30px 0;
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.saleoff .overlay .sale__group .sale1 p {
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+    text-shadow: 3px 3px 9px rgba(0, 0, 0, 0.9);
+}
+/* Sale off */
+
+/* About us */
+.about .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .overlay .about__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 50px;
+    padding: 120px 20px 0 200px;
+}
+.about .overlay .about__top .about__us {
+    width: 40%;
+}
+.about .overlay .about__top .ourteam {
+    width: 60%;
+}
+.about .overlay .about__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 200px 10px 200px;
+}
+.about .overlay .about__top .about__us h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    font-weight: 500px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.about .overlay .about__top .about__us ul li p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+.about .overlay .about__top .about__us ul .devide {
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    margin: 20px 0;
+}
+.about .overlay .about__top .about__us ul:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .overlay .about__top .about__us ul:last-child li {
+    text-align: center;
+}
+.about .overlay .about__top .about__us ul:last-child h6 {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--primary);
+}
+.about .overlay .about__top .ourteam h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    font-weight: 500px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.about .overlay .about__top .ourteam .ourteam__group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px
+}
+.about .overlay .about__top .ourteam .ourteam__group figure {
+    width: 46%;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid var(--primary);
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.about .overlay .about__top .ourteam .ourteam__group figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.about .overlay .about__top .ourteam .ourteam__group figure figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+}
+.about .overlay .about__top .ourteam .ourteam__group figure figcaption h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.about .overlay .about__top .ourteam .ourteam__group figure figcaption h4 {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+}
+.about .overlay .about__footer .about__footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.about .overlay .about__footer .about__footer-contact h1 {
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 25px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 5px;
+}
+.about .overlay .about__footer .about__footer-contact p {
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+.about .overlay .about__footer .about__footer-contact .ab-icon {
+    display: flex;
+    align-items: center;
+}
+.about .overlay .about__footer .about__footer-contact .ab-icon p {
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+}
+.about .overlay .about__footer .about__footer-contact .ab-icon i {
+    font-size: 20px;
+    color: var(--primary);
+    margin-right: 10px;
+}
+.about .overlay .about__footer .about__footer-subcribe {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.about .overlay .about__footer .about__footer-subcribe .about__footer-write {
+    width: 300px;
+    position: relative;
+}
+.about .overlay .about__footer .about__footer-subcribe .about__footer-write input {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    border-radius: 40px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+}
+.about .overlay .about__footer .about__footer-subcribe .about__footer-write input::placeholder {
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.about .overlay .about__footer .about__footer-subcribe .about__footer-write button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-color: var(--primary);
+    border-radius: 40px;
+    border: none;
+    color: #000;
+    padding: 0 10px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+.about .overlay .about__footer .about__footer-subcribe .about__footer-write button:hover {
+    transform: scale(1.09);
+}
+.about .overlay .about__footer .about__footer-subcribe .footer__icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.about .overlay .about__footer .about__footer-subcribe .footer__icon i {
+    font-size: 30px;
+    color: var(--primary);
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+}
+.about .overlay .about__footer .about__footer-subcribe .footer__icon i:hover {
+    transform: scale(1.5);
+}
+.about .overlay .about__footer .about__footer-subcribe p {
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+/* About */

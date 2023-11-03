@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../global.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="../../../vendors/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="../../../vendors/themify-icons/themify-icons.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <section class="login__overlay">
+      <form class="signin">
+        <div class="signin__left">
+          <h1>sign in</h1>
+          <div class="signin__import">
+            <fieldset>
+              <legend>Email</legend>
+              <input placeholder="Your Email" type="email" />
+              <i class="fa-solid fa-envelope"></i>
+            </fieldset>
+            <fieldset>
+              <legend>Password</legend>
+              <input placeholder="Your Password" type="password" />
+              <i class="fa-solid fa-lock"></i>
+            </fieldset>
+            <button type="submit">sign in</button>
+            <a href="">For got password?</a>
+          </div>
+          <div class="signin__or">
+            <span></span>
+            <p>or Sign In with</p>
+            <span></span>
+          </div>
+          <div class="signin__with">
+            <div class="signin__with-items">
+              <button type="submit">
+                <i title="Facebook" class="fa-brands fa-square-facebook"></i>
+              </button>
+            </div>
+            <div class="signin__with-items">
+              <button type="submit">
+                <i title="Instagram" class="fa-brands fa-square-instagram"></i>
+              </button>
+            </div>
+            <div class="signin__with-items">
+              <button type="submit">
+                <i title="Google" class="fa-brands fa-square-google-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="signin__right">
+          <div class="signin__right-overlay">
+            <h1>Wellcome to</h1>
+            <h2>1990 Bakery</h2>
+            <button>Sign Up</button>
+            <p>Sign up now to take 25% discount</p>
+          </div>
+        </div>
+      </form>
+
+      <form class="signup">
+        <div class="signup__left">
+          <div class="signup__left-overlay">
+            <h1>wellcome back</h1>
+            <h2>1990 Bakery</h2>
+            <button type="sbmit">sign in</button>
+            <p>Create a new account to fully enjoy our flavors and services</p>
+          </div>
+        </div>
+        <div class="signup__right">
+          <h1>creat account</h1>
+          <div class="signup__import">
+            <fieldset>
+              <legend>Name *</legend>
+              <input required placeholder="Name" type="text" />
+              <i class="fa-solid fa-user"></i>
+            </fieldset>
+            <fieldset>
+              <legend>Email *</legend>
+              <input required placeholder="Your Email" type="email" />
+              <i class="fa-solid fa-envelope"></i>
+            </fieldset>
+            <fieldset>
+              <legend>Password *</legend>
+              <input required placeholder="Your Password" type="password" />
+              <i class="fa-solid fa-lock"></i>
+            </fieldset>
+            <fieldset>
+              <legend>Confirm password *</legend>
+              <input required placeholder="Confirm Your Password" type="password" />
+              <i class="fa-solid fa-check-double"></i>
+            </fieldset>
+            <div class="signup__import-terms">
+              <input type="checkbox" />
+              <label
+                >I agree the <a href="">Terms</a> of
+                <a href="">Service and Privacy Policy</a></label
+              >
+            </div>
+            <button type="submit">creat account</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

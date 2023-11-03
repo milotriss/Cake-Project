@@ -1,0 +1,98 @@
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 0 300px;
+    background-color: transparent;
+}
+
+header .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+header .search .search__items {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+header .search input {
+    padding: 10px 0 10px 80px;
+    width: 700px;
+    outline: none;
+    border-radius: 30px;
+    font-size: 16px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    margin-right: 20px;
+}
+header .search input::placeholder {
+    color: #fff;
+}
+header .search .search__items i {
+    background-color: #fff;
+    color: var(--primary);
+    font-size: 20px;
+    padding: 8px 30px 5px 20px;
+    border-radius: 30px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    bottom: 3px;
+}
+header .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .login button:first-child {
+    padding: 10px 30px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    border-radius: 30px;
+    margin-right: 20px;
+    transition: 0.2s;
+}
+header .login button:first-child:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border: 1px solid #FFF;
+    transform: scale(1.1);
+}
+header .login button:last-child {
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    transition: 0.2s;
+}
+header .login button:last-child:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border: 1px solid #fff;
+    transform: scale(1.1);
+}
+header .login button:last-child:hover i {
+    color: #fff;
+}
+header .login button:last-child i {
+    padding: 9px 9px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: var(--primary);
+}
+
