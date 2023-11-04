@@ -1,0 +1,169 @@
+body {
+    background-image: url("../../../assets/images/cake/sale1.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.admin__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    bottom: 55px;
+    width: 80%;
+    margin-right: 30px;
+}
+.main__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    padding: 50px 50px;
+    gap: 50px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+    overflow: hidden;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--primary);
+    border-left: none;
+}
+.sidebar .admin {
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar .admin .admin__info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    gap: 20px;
+}
+.sidebar .admin .admin__info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.sidebar .admin .admin__info figcaption {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+}
+.sidebar .admin .admin__info figcaption h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+.sidebar .admin .admin__info figcaption p {
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+.sidebar .admin .admin__info figcaption button {
+    padding: 5px 15px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.sidebar .admin .admin__info figcaption button:hover {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.9), rgba(0, 255, 255, 0.5));
+    color: #000;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+    transform: scale(1.09);
+}
+.sidebar .sidebar__info {
+    height: 70%;
+    width: 100%;
+}
+.sidebar .sidebar__info ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+.sidebar .sidebar__info ul li {
+    height: 12.5%;
+    width: 100%;
+    transition: 0.3s;
+}
+.sidebar .sidebar__info ul li:hover {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.9), rgba(0, 255, 255, 0.5));
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+    transform: scale(1.09);
+}
+.sidebar .sidebar__info ul li:hover i {
+    color: #000;
+}
+.sidebar .sidebar__info ul li:hover span {
+    color:#000;
+}
+.sidebar .sidebar__info ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 30px;
+    gap: 20px;
+}
+.sidebar .sidebar__info ul li a i {
+    font-size: 30px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.sidebar .sidebar__info ul li a span {
+    width: 100%;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}

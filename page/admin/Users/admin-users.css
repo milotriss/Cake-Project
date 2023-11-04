@@ -1,0 +1,285 @@
+body {
+    background-image: url("../../../assets/images/cake/sale1.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.admin__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    bottom: 55px;
+    width: 80%;
+    margin-right: 30px;
+}
+.main__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    padding: 50px 50px;
+    gap: 50px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+/* Users */
+.main__overlay .users__list {
+    width: 100%;
+    height: 50%;
+    padding: 30px 30px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+.main__overlay .users__list .users__list-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    height: 20%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+.main__overlay .users__list .users__list-items h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.main__overlay .users__list .users__list-items .users__list-search {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.main__overlay .users__list .users__list-items .users__list-search input {
+    flex: 1;
+    padding: 10px 100px 10px 20px;
+    font-size: 18px;
+    outline: none;
+    background-color: transparent;
+    border: 0.5px solid var(--primary);
+    border-radius: 5px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.main__overlay .users__list .users__list-items .users__list-search input::placeholder {
+    color: #b2b0b0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.main__overlay .users__list .users__list-items .users__list-search i {
+    display: inline-block;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    font-size: 20px;
+    color: #000;
+    padding: 5px 10px 5px 30px;
+    background-color: var(--primary);
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.main__overlay .users__list .users__list-items .users__list-search i:hover {
+    transform: scale(1.05);
+}
+.main__overlay .users__list table {
+    height: 80%;
+    width: 100%;
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+.main__overlay .users__list table tr {
+    text-align: center;
+}
+.main__overlay .users__list table tr th {
+    color: var(--primary);
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+.main__overlay .users__list table tr td {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+.main__overlay .users__list table tr td button {
+    padding: 5px 15px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--primary);
+    font-size: 18px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.main__overlay .users__list table tr td button:hover {
+    background-color: var(--primary);
+    color: #000;
+}
+/* Users */
+
+
+/* Admin */
+.main__overlay .admin__list {
+    width: 100%;
+    height: 50%;
+    padding: 30px 30px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.main__overlay .admin__list .admin__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+.main__overlay .admin__list .admin__title h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.main__overlay .admin__list .admin__title .admin__list-search {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.main__overlay .admin__list .admin__title .admin__list-search input {
+    flex: 1;
+    padding: 10px 100px 10px 20px;
+    font-size: 18px;
+    outline: none;
+    background-color: transparent;
+    border: 0.5px solid var(--primary);
+    border-radius: 5px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.main__overlay .admin__list .admin__title .admin__list-search input::placeholder {
+    color: #b2b0b0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.main__overlay .admin__list .admin__title .admin__list-search i {
+    display: inline-block;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    font-size: 20px;
+    color: #000;
+    padding: 5px 10px 5px 30px;
+    background-color: var(--primary);
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.main__overlay .admin__list .admin__title .admin__list-search i:hover {
+    transform: scale(1.05);
+}
+.main__overlay .admin__list .admin__title button {
+    font-size: 20px;
+    padding: 8px 15px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    border-radius: 10px;
+    transition: 0.3s;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.main__overlay .admin__list .admin__title button:hover {
+    transform: scale(1.09);
+    background-color: var(--primary);
+    color: rgba(0, 0, 0, 0.9);
+}
+.main__overlay .admin__list table {
+    height: 80%;
+    width: 100%;
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+}
+.main__overlay .admin__list table tr {
+    text-align: center;
+}
+.main__overlay .admin__list table tr th {
+    color: var(--primary);
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+.main__overlay .admin__list table tr td {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+.main__overlay .admin__list table tr td button {
+    padding: 5px 15px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--primary);
+    font-size: 18px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.main__overlay .admin__list table tr td button:hover {
+    background-color: var(--primary);
+    color: #000;
+}
+/* Admin */

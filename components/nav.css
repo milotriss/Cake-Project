@@ -13,15 +13,12 @@ nav {
   background-color: transparent;
 }
 nav .nav__top {
-  height: 70%;
+  flex: 1;
   border-radius: 30px;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.01);
   display: none;
   animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) ;
-}
-nav .nav__bottom {
-  height: 30%;
 }
 nav .nav__top ul {
   display: flex;
@@ -98,7 +95,7 @@ nav .nav__bottom {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 10px;
+  gap: 30px;
   border-radius: 30px;
   background-color: transparent;
 }
@@ -120,7 +117,5 @@ nav .nav__bottom button:hover {
   background-color: transparent;
   opacity: 1;
   border-radius: 50px;
-  height: 60px;
-  width: 60px;
   transform: scale(1.1);
 }
