@@ -1,222 +1,595 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admins</title>
-    <link rel="stylesheet" href="../../../global.css">
-    <link rel="stylesheet" href="../../../vendors/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="../../../vendors/fontawesome-free-6.4.2-web/css/all.css">
-    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="../../../global.css" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
+      rel="stylesheet"
+      href="../../../vendors/themify-icons/themify-icons.css"
     />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="../../../vendors/fontawesome-free-6.4.2-web/css/all.css"
+    />
+    <link rel="stylesheet" href="./admin.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="admin__overlay">
-        <section id="admin__sidebar" class="sidebar">
-            <section class="admin">
-                <figure class="admin__info">
-                    <img src="../../../assets/images/cake/admin.jpeg" alt="">
-                    <figcaption>
-                        <h1>Lam Nhat Tien</h1>
-                        <p>Position: ...</p>
-                        <button>Log out</button>
-                    </figcaption>
-                </figure>
-            </section>
-            <section class="sidebar__info">
-                <ul>
-                    <li>
-                        <a href="">
-                            <i class="ti-view-grid"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="ti-user"></i>
-                            <span>Users</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="ti-dropbox"></i>
-                            <span>Products</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="ti-receipt"></i>
-                            <span>Orders</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="ti-comments"></i>
-                            <span>Reviews</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="ti-image"></i>
-                            <span>Banners</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="ti-receipt"></i>
-                            <span>Vouchers</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="ti-settings"></i>
-                            <span>Setting</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+      <section id="admin__sidebar" class="sidebar">
+        <section class="admin">
+          <figure class="admin__info">
+            <img src="../../../assets/images/cake/admin.jpeg" alt="" />
+            <figcaption>
+              <h1>Lam Nhat Tien</h1>
+              <p>Position: ...</p>
+              <button>Log out</button>
+            </figcaption>
+          </figure>
         </section>
-        <main class="users">
-            <div class="main__overlay">
-                <section class="users__list">
-                    <div class="users__list-items">
-                        <h1>List Of Users</h1>
-                        <div class="users__list-search">
-                            <input placeholder="Search by Name" type="text">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>#</th>
-                            <th>ID</th>
-                            <th>Email</th>
-                            <th>Full Name</th>
-                            <th>Address</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>01</td>
-                            <td>first_user@gmail.com</td>
-                            <td>Lam Nhat A</td>
-                            <td>Da Nang</td>
-                            <td>Active</td>
-                            <td>
-                                <button type="submit">unblock</button>
-                                <button type="submit">block</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>01</td>
-                            <td>first_user@gmail.com</td>
-                            <td>Lam Nhat A</td>
-                            <td>Da Nang</td>
-                            <td>Active</td>
-                            <td>
-                                <button type="submit">unblock</button>
-                                <button type="submit">block</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>01</td>
-                            <td>first_user@gmail.com</td>
-                            <td>Lam Nhat A</td>
-                            <td>Da Nang</td>
-                            <td>Active</td>
-                            <td>
-                                <button type="submit">unblock</button>
-                                <button type="submit">block</button>
-                            </td>
-                        </tr>
-                    </table>
-                </section>
-                <section class="admin__list">
-                    <div class="admin__title">
-                        <h1>List Of Admin</h1>
-                        <div class="admin__list-search">
-                            <input placeholder="Search by name" type="text">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                        <button>Add Admin +</button>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>#</th>
-                            <th>ID</th>
-                            <th>Email</th>
-                            <th>Full Name</th>
-                            <th>Role</th>
-                            <th>Action</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>01</td>
-                            <td>first_user@gmail.com</td>
-                            <td>Lam Nhat A</td>
-                            <td>Active</td>
-                            <td>
-                                <button type="submit">edit</button>
-                                <button type="submit">delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>01</td>
-                            <td>first_user@gmail.com</td>
-                            <td>Lam Nhat A</td>
-                            <td>Active</td>
-                            <td>
-                                <button type="submit">edit</button>
-                                <button type="submit">delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>01</td>
-                            <td>first_user@gmail.com</td>
-                            <td>Lam Nhat A</td>
-                            <td>Active</td>
-                            <td>
-                                <button type="submit">edit</button>
-                                <button type="submit">delete</button>
-                            </td>
-                        </tr>
-                    </table>
-                </section>
+        <section class="sidebar__info">
+          <ul>
+            <li class="list-sidebar admin-active">
+              <a href="">
+                <i class="ti-view-grid"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="list-sidebar">
+              <a href="">
+                <i class="ti-user"></i>
+                <span>Users</span>
+              </a>
+            </li>
+            <li class="list-sidebar">
+              <a href="">
+                <i class="ti-dropbox"></i>
+                <span>Products</span>
+              </a>
+            </li>
+            <li class="list-sidebar">
+              <a href="">
+                <i class="ti-receipt"></i>
+                <span>Orders</span>
+              </a>
+            </li>
+            <li class="list-sidebar">
+              <a href="">
+                <i class="ti-comments"></i>
+                <span>Reviews</span>
+              </a>
+            </li>
+            <li class="list-sidebar">
+              <a href="">
+                <i class="ti-image"></i>
+                <span>Banners</span>
+              </a>
+            </li>
+            <li class="list-sidebar">
+              <a href="">
+                <i class="ti-receipt"></i>
+                <span>Vouchers</span>
+              </a>
+            </li>
+            <li class="list-sidebar">
+              <a href="">
+                <i class="ti-settings"></i>
+                <span>Setting</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <main class="dashboard main-none admin-active">
+        <div class="revenue">
+          <h1>Revenue</h1>
+          <i class="fa-solid fa-money-bill-wheat"></i>
+          <p>$999+</p>
+        </div>
+        <div class="products-db">
+          <h1>Products</h1>
+          <i class="fa-solid fa-clipboard-list"></i>
+          <p>9999+</p>
+        </div>
+        <div class="users-db">
+          <h1>Users</h1>
+          <i class="fa-solid fa-user"></i>
+          <p>99+</p>
+        </div>
+        <div class="status__users">
+          <h1>Statistics Of Users</h1>
+          <p>Comming Soon</p>
+        </div>
+        <div class="status__orders">
+          <h1>Statistics Of Orders</h1>
+          <p>Comming Soon</p>
+        </div>
+      </main>
+      <main class="users main-none">
+        <div class="main__overlay">
+          <section class="users__list">
+            <div class="users__list-items">
+              <h1>List Of Users</h1>
+              <div class="users__list-search">
+                <input placeholder="Search by Name" type="text" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
             </div>
-        </main>
-        <main class="dashboard">
-            <div class="revenue">
-                <h1>Revenue</h1>
-                <i class="fa-solid fa-money-bill-wheat"></i>
-                <p>$999+</p>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Full Name</th>
+                <th>Address</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>first_user@gmail.com</td>
+                <td>Lam Nhat A</td>
+                <td>Da Nang</td>
+                <td>Active</td>
+                <td>
+                  <button type="submit">unblock</button>
+                  <button type="submit">block</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>first_user@gmail.com</td>
+                <td>Lam Nhat A</td>
+                <td>Da Nang</td>
+                <td>Active</td>
+                <td>
+                  <button type="submit">unblock</button>
+                  <button type="submit">block</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>first_user@gmail.com</td>
+                <td>Lam Nhat A</td>
+                <td>Da Nang</td>
+                <td>Active</td>
+                <td>
+                  <button type="submit">unblock</button>
+                  <button type="submit">block</button>
+                </td>
+              </tr>
+            </table>
+          </section>
+          <section class="admin__list">
+            <div class="admin__title">
+              <h1>List Of Admin</h1>
+              <div class="admin__list-search">
+                <input placeholder="Search by name" type="text" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <button>Add Admin +</button>
             </div>
-            <div class="orders">
-                <h1>Products</h1>
-                <i class="fa-solid fa-clipboard-list"></i>
-                <p>9999+</p>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Full Name</th>
+                <th>Role</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>first_user@gmail.com</td>
+                <td>Lam Nhat A</td>
+                <td>Active</td>
+                <td>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>first_user@gmail.com</td>
+                <td>Lam Nhat A</td>
+                <td>Active</td>
+                <td>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>first_user@gmail.com</td>
+                <td>Lam Nhat A</td>
+                <td>Active</td>
+                <td>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+            </table>
+          </section>
+        </div>
+      </main>
+      <main class="products main-none">
+        <section class="products__list">
+          <div class="products__title">
+            <h1>List Of Products</h1>
+            <div class="products__list-search">
+              <input placeholder="Search by name" type="text" />
+              <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div class="gifts">
-                <h1>Users</h1>
-                <i class="fa-solid fa-user"></i>
-                <p>99+</p>
+            <button>Add Products +</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>ID-Products</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Quantity Sold</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>Producst 1</td>
+                <td>49000</td>
+                <td>19</td>
+                <td>99+</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+      <main class="orders main-none">
+        <section class="orders__list">
+          <div class="orders__title">
+            <h1>List Of Orders</h1>
+            <div class="orders__list-search">
+              <input placeholder="Search by name" type="text" />
+              <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div class="status__users">
-                <h1>Statistics Of Users</h1>
-                <p>Comming Soon</p>
-            </div>
-            <div class="status__orders">
-                <h1>Statistics Of Orders</h1>
-                <p>Comming Soon</p>
-            </div>
-        </main>
+            <button>Add Order +</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>ID-Order</th>
+                <th>Date</th>
+                <th>User Order</th>
+                <th>Total Order Value</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01</td>
+                <td>09/01/2024</td>
+                <td>ID-User</td>
+                <td>999.999+</td>
+                <td>Order placed</td>
+                <td>
+                  <button type="submit">view</button>
+                  <button type="submit">edit</button>
+                  <button type="submit">delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
     </div>
-</body>
+    <script src="./admin.js"></script>
+  </body>
 </html>

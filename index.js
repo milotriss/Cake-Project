@@ -54,16 +54,17 @@ renderMainSidebar()
 //
 function renderMainHeader(){
   const mainHeader = document.getElementById("mainheader")
-  mainHeader.innerHTML = `<img
+  mainHeader.innerHTML = `
+  <img
   src="https://toppng.com/uploads/preview/image-library-library-cupcake-birthday-cake-torte-simple-bakery-cupcake-logo-11562961286zthqttjrf1.png"
   alt=""
-/>
-<div class="login">
-  <button onclick="login()" type="submit">Login</button>
-  <button type="submit">
-    <i class="fa-solid fa-cart-plus"></i>
-  </button>
-</div>`
+  />
+  <div class="login">
+    <button onclick="login()" type="submit">Login</button>
+    <button type="submit">
+      <i class="fa-solid fa-cart-plus"></i>
+    </button>
+  </div>`
 }
 renderMainHeader()
 //

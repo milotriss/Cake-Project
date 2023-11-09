@@ -12,7 +12,7 @@ function renderProducts() {
           <span>Con lai: ${item.stock}</span>
           <div class="details__add">
             <button type="submit">ADD+</button>
-            <input type="text" />
+            <input min="1" value="1" max="${item.stock}" type="text" />
           </div>
         </figcaption>
       </figure>`;

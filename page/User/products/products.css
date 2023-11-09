@@ -156,7 +156,7 @@ main section figcaption span {
 }
 main section figcaption .details__add {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     gap: 10%;
@@ -169,7 +169,7 @@ main section figcaption .details__add button {
     border: 1px solid var(--primary);
     border-radius: 10px;
     transition: 0.3s;
-    width: 30%;
+    width: 50%;
     font-size: 14px;
 }
 main section figcaption .details__add button:hover {
@@ -193,5 +193,6 @@ main section figcaption .details__add input {
     background-color: rgba(0, 0, 0, 0.4);
     color: var(--primary);
     box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
-    width: 60%;
+    width: 50%;
+    text-align: center;
 }

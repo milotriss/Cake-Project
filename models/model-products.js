@@ -165,7 +165,7 @@ const products = [
     price: "79000",
     stock: 19, // ton kho
     isDelete: 1, //soft delete //cho admin 2, cho user 1
-    img: "",
+    img: "../assets/images/burger&pizza/chikenburger.jpeg",
     desc: "mo ta",
     category: "Burger & Pizza",
   },
@@ -271,11 +271,11 @@ const products = [
   },
   {
     idProducts: 28,
-    productName: "Scone (2 piece)",
+    productName: "Scone (2 pieces)",
     price: "39000",
     stock: 19, // ton kho
     isDelete: 1, //soft delete //cho admin 2, cho user 1
-    img: "",
+    img: "../assets/images/cookie&biscuit/scone photography 司康.jpeg",
     desc: "mo ta",
     category: "Cookie & Biscuit",
   },

@@ -164,7 +164,6 @@ body {
     border: 1px solid var(--primary);
     border-radius: 40px;
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
-    /* display: none; */
 }
 .dashboard .revenue {
     grid-area: 1/1/2/3;
@@ -172,13 +171,21 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--primary);
     border-radius: 40px;
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.dashboard .orders {
+.dashboard .revenue i {
+    font-size: 30px;
+}
+.dashboard .revenue p {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+.dashboard .products-db {
     grid-area: 1/3/2/5;
     display: flex;
     justify-content: center;
@@ -189,8 +196,16 @@ body {
     border-radius: 40px;
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    gap: 20px;
 }
-.dashboard .gifts {
+.dashboard .products-db i {
+    font-size: 30px;
+}
+.dashboard .products-db p {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+.dashboard .users-db {
     grid-area: 1/5/2/7;
     display: flex;
     justify-content: center;
@@ -201,6 +216,14 @@ body {
     border-radius: 40px;
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    gap: 20px;
+}
+.dashboard .users-db i {
+    font-size: 30px;
+}
+.dashboard .users-db p {
+    font-size: 25px;
+    letter-spacing: 3px;
 }
 .dashboard .status__users {
     grid-area: 2/1/3/4;
@@ -214,6 +237,9 @@ body {
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+.dashboard .status__users p {
+    font-size: 50px;
+}
 .dashboard .status__orders {
     grid-area: 2/4/3/7;
     display: flex;
@@ -226,6 +252,9 @@ body {
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+.dashboard .status__orders p {
+    font-size: 50px;
+}
 /* Dashboard */
 
 /* Users */
@@ -236,7 +265,6 @@ body {
     bottom: 55px;
     width: 80%;
     margin-right: 30px;
-    display: none;
 }
 .main__overlay {
     position: absolute;
@@ -384,7 +412,6 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
-    
 }
 .main__overlay .admin__list .admin__title {
     display: flex;
@@ -499,3 +526,331 @@ body {
     color: #000;
 }
 /* Admin */
+
+
+
+
+/* products */
+.products {
+    color: var(--primary);
+    position: absolute;
+    right: 0;
+    top: 55px;
+    bottom: 55px;
+    width: 80%;
+    margin-right: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px 30px;
+    gap: 20px;
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.products .products__list {
+    width: 100%;
+    height: 100%;
+    padding: 30px 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    
+}
+.products .products__list .products__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.products .products__list .products__title h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.products .products__list .products__title .products__list-search {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.products .products__list .products__title .products__list-search input {
+    flex: 1;
+    padding: 10px 100px 10px 20px;
+    font-size: 18px;
+    outline: none;
+    background-color: transparent;
+    border: 0.5px solid var(--primary);
+    border-radius: 5px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.products .products__list .products__title .products__list-search input::placeholder {
+    color: #b2b0b0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.products .products__list .products__title .products__list-search i {
+    display: inline-block;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    font-size: 20px;
+    color: #000;
+    padding: 5px 10px 5px 30px;
+    background-color: var(--primary);
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.products .products__list .products__title .products__list-search i:hover {
+    transform: scale(1.05);
+}
+.products .products__list .products__title button {
+    font-size: 20px;
+    padding: 8px 15px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    border-radius: 10px;
+    transition: 0.3s;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.products .products__list .products__title button:hover {
+    transform: scale(1.09);
+    background-color: var(--primary);
+    color: rgba(0, 0, 0, 0.9);
+}
+.products .products__list table {
+    height: 80%;
+    width: 100%;
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.products .products__list table thead {
+    height: 10%;
+    width: 100%;
+}
+.products .products__list table tbody{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 90%;
+    width: 100%;
+}
+
+.products .products__list table tr {
+    text-align: center;
+}
+
+.products .products__list table thead tr th {
+    color: var(--primary);
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+.products .products__list table tbody tr td {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+.products .products__list table tbody tr td button {
+    padding: 5px 15px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--primary);
+    font-size: 18px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.products .products__list table tbody tr td button:hover {
+    background-color: var(--primary);
+    color: #000;
+}
+/* Products */
+
+
+/* Orders */
+.orders {
+    color: var(--primary);
+    position: absolute;
+    right: 0;
+    top: 55px;
+    bottom: 55px;
+    width: 80%;
+    margin-right: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px 30px;
+    gap: 20px;
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.orders .orders__list {
+    width: 100%;
+    height: 100%;
+    padding: 30px 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    
+}
+.orders .orders__list .orders__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.orders .orders__list .orders__title h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.orders .orders__list .orders__title .orders__list-search {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.orders .orders__list .orders__title .orders__list-search input {
+    flex: 1;
+    padding: 10px 100px 10px 20px;
+    font-size: 18px;
+    outline: none;
+    background-color: transparent;
+    border: 0.5px solid var(--primary);
+    border-radius: 5px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.orders .orders__list .orders__title .orders__list-search input::placeholder {
+    color: #b2b0b0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.orders .orders__list .orders__title .orders__list-search i {
+    display: inline-block;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    font-size: 20px;
+    color: #000;
+    padding: 5px 10px 5px 30px;
+    background-color: var(--primary);
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.orders .orders__list .orders__title .orders__list-search i:hover {
+    transform: scale(1.05);
+}
+.orders .orders__list .orders__title button {
+    font-size: 20px;
+    padding: 8px 15px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    border-radius: 10px;
+    transition: 0.3s;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.orders .orders__list .orders__title button:hover {
+    transform: scale(1.09);
+    background-color: var(--primary);
+    color: rgba(0, 0, 0, 0.9);
+}
+.orders .orders__list table {
+    height: 80%;
+    width: 100%;
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+}
+.orders .orders__list table thead {
+    height: 10%;
+    width: 100%;
+}
+.orders .orders__list table tbody{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 90%;
+    width: 100%;
+}
+
+.orders .orders__list table tr {
+    text-align: center;
+}
+
+.orders .orders__list table thead tr th {
+    color: var(--primary);
+    font-size: 25px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+.orders .orders__list table tbody tr td {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+.orders .orders__list table tbody tr td button {
+    padding: 5px 15px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--primary);
+    font-size: 18px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.orders .orders__list table tbody tr td button:hover {
+    background-color: var(--primary);
+    color: #000;
+}
+
+/* Active */
+.list-sidebar.admin-active {
+    color: #000;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.9), rgba(0, 255, 255, 0.5));
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+.main-none {
+    display: none;
+}
+.main-none.admin-active {
+    display: grid;
+}
