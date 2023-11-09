@@ -1,3 +1,6 @@
+body {
+    overflow: hidden;
+}
 /* Header */
 .bg__contact {
     background-image: url("../../../assets/images/cake/login-form.JPG");
@@ -29,8 +32,10 @@
     border: 1px solid var(--primary);   
     border-radius: 30px;
     color: var(--primary);
-    font-size: 16px;    
+    font-size: 18px;    
     transition: 0.3s;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 .bg__contact .overlay header .back i {
     font-size: 18pxpx;
@@ -48,12 +53,8 @@
     object-fit: cover;
     border-radius: 50%;
 }
-.bg__contact .overlay header .header__right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.bg__contact .overlay header .header__right button:first-child {
+
+.bg__contact .overlay header button {
     padding: 10px 30px;
     border: 1px solid var(--primary);
     background-color: rgba(0, 0, 0, 0.5);
@@ -61,36 +62,17 @@
     border-radius: 30px;
     margin-right: 20px;
     transition: 0.2s;
+    font-size: 18px;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5); 
 }
-.bg__contact .overlay header .header__right button:first-child:hover {
+.bg__contact .overlay header button:hover {
     background-color: rgba(0, 0, 0, 0.1);
     color: #fff;    
     border: 1px solid #FFF;
     transform: scale(1.1);
 }
-.bg__contact .overlay header .header__right button:last-child {
-    border: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    border: 1px solid var(--primary);
-    transition: 0.2s;
-}
-.bg__contact .overlay header .header__right button:last-child:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #fff;
-    border: 1px solid #fff;
-    transform: scale(1.1);
-}
-.bg__contact .overlay header .header__right button:last-child:hover i {
-    color: #fff;
-}
-.bg__contact .overlay header .header__right button:last-child i {
-    padding: 9px 9px;
-    background-color: transparent;
-    border: none;
-    font-size: 14px;
-    color: var(--primary);
-}
+
 /* Header */
 
 /* main */

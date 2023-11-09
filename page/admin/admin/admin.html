@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users</title>
+    <title>Admins</title>
     <link rel="stylesheet" href="../../../global.css">
     <link rel="stylesheet" href="../../../vendors/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../../../vendors/fontawesome-free-6.4.2-web/css/all.css">
-    <link rel="stylesheet" href="../admin-component/admin-sidebar.css">
-    <link rel="stylesheet" href="./admin-users.css">
+    <link rel="stylesheet" href="./admin.css">
     <link
     href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
@@ -17,8 +16,70 @@
 <body>
     <div class="admin__overlay">
         <section id="admin__sidebar" class="sidebar">
+            <section class="admin">
+                <figure class="admin__info">
+                    <img src="../../../assets/images/cake/admin.jpeg" alt="">
+                    <figcaption>
+                        <h1>Lam Nhat Tien</h1>
+                        <p>Position: ...</p>
+                        <button>Log out</button>
+                    </figcaption>
+                </figure>
+            </section>
+            <section class="sidebar__info">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="ti-view-grid"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="ti-user"></i>
+                            <span>Users</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="ti-dropbox"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="ti-receipt"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="ti-comments"></i>
+                            <span>Reviews</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="ti-image"></i>
+                            <span>Banners</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="ti-receipt"></i>
+                            <span>Vouchers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="ti-settings"></i>
+                            <span>Setting</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
         </section>
-        <main>
+        <main class="users">
             <div class="main__overlay">
                 <section class="users__list">
                     <div class="users__list-items">
@@ -46,7 +107,7 @@
                             <td>Da Nang</td>
                             <td>Active</td>
                             <td>
-                                <button type="submit">view</button>
+                                <button type="submit">unblock</button>
                                 <button type="submit">block</button>
                             </td>
                         </tr>
@@ -58,7 +119,7 @@
                             <td>Da Nang</td>
                             <td>Active</td>
                             <td>
-                                <button type="submit">view</button>
+                                <button type="submit">unblock</button>
                                 <button type="submit">block</button>
                             </td>
                         </tr>
@@ -70,7 +131,7 @@
                             <td>Da Nang</td>
                             <td>Active</td>
                             <td>
-                                <button type="submit">view</button>
+                                <button type="submit">unblock</button>
                                 <button type="submit">block</button>
                             </td>
                         </tr>
@@ -101,7 +162,6 @@
                             <td>Lam Nhat A</td>
                             <td>Active</td>
                             <td>
-                                <button type="submit">view</button>
                                 <button type="submit">edit</button>
                                 <button type="submit">delete</button>
                             </td>
@@ -113,7 +173,6 @@
                             <td>Lam Nhat A</td>
                             <td>Active</td>
                             <td>
-                                <button type="submit">view</button>
                                 <button type="submit">edit</button>
                                 <button type="submit">delete</button>
                             </td>
@@ -125,7 +184,6 @@
                             <td>Lam Nhat A</td>
                             <td>Active</td>
                             <td>
-                                <button type="submit">view</button>
                                 <button type="submit">edit</button>
                                 <button type="submit">delete</button>
                             </td>
@@ -134,7 +192,31 @@
                 </section>
             </div>
         </main>
-        <script src="../admin-component/admin-sidebar.js"></script>
+        <main class="dashboard">
+            <div class="revenue">
+                <h1>Revenue</h1>
+                <i class="fa-solid fa-money-bill-wheat"></i>
+                <p>$999+</p>
+            </div>
+            <div class="orders">
+                <h1>Products</h1>
+                <i class="fa-solid fa-clipboard-list"></i>
+                <p>9999+</p>
+            </div>
+            <div class="gifts">
+                <h1>Users</h1>
+                <i class="fa-solid fa-user"></i>
+                <p>99+</p>
+            </div>
+            <div class="status__users">
+                <h1>Statistics Of Users</h1>
+                <p>Comming Soon</p>
+            </div>
+            <div class="status__orders">
+                <h1>Statistics Of Orders</h1>
+                <p>Comming Soon</p>
+            </div>
+        </main>
     </div>
 </body>
 </html>

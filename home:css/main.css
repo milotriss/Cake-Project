@@ -25,6 +25,8 @@ main{
     flex-direction: column;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
     position: relative;
+    transition: 0.5s;
+
 }
 .home .overlay {
     padding: 30px 100px;
@@ -38,7 +40,7 @@ main{
     justify-content: center;
     scroll-snap-align: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
 }
 
@@ -113,6 +115,8 @@ main{
     justify-content: center;
     scroll-snap-align: center;
     position: relative;
+    transition: 0.5s;
+
 }
 .saleoff .overlay {
     padding: 0 200px;
@@ -228,6 +232,8 @@ main{
     justify-content: center;
     scroll-snap-align: center;
     position: relative;
+    transition: 0.5s;
+
 }
 .about .overlay {
     position: absolute;
@@ -468,9 +474,16 @@ main{
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--primary);
 }
-.home__dots .home__dot:active {
-    background-color: #fff;
+.home__dot.active {
+    background-color: var(--primary);
 }
+.item__active {
+    display: none;
+}
+.item__active.active {
+    display: block;
+}
+
 @media (min-width: 768px) and (max-width: 1024px){
     .home__dots .home__dot{
         width: 18px;

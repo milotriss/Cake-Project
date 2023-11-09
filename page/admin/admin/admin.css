@@ -6,6 +6,7 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 .admin__overlay {
     position: absolute;
@@ -18,13 +19,224 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-main {
+/* SideBar */
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+    overflow: hidden;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--primary);
+    border-left: none;
+}
+.sidebar .admin {
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar .admin .admin__info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    gap: 20px;
+}
+.sidebar .admin .admin__info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.sidebar .admin .admin__info figcaption {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+}
+.sidebar .admin .admin__info figcaption h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+.sidebar .admin .admin__info figcaption p {
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+.sidebar .admin .admin__info figcaption button {
+    padding: 5px 15px;
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.sidebar .admin .admin__info figcaption button:hover {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.9), rgba(0, 255, 255, 0.5));
+    color: #000;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+    transform: scale(1.09);
+}
+.sidebar .sidebar__info {
+    height: 70%;
+    width: 100%;
+}
+.sidebar .sidebar__info ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+.sidebar .sidebar__info ul li {
+    height: 12.5%;
+    width: 100%;
+    transition: 0.3s;
+}
+.sidebar .sidebar__info ul li:hover {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.9), rgba(0, 255, 255, 0.5));
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+    transform: scale(1.09);
+}
+.sidebar .sidebar__info ul li:hover i {
+    color: #000;
+}
+.sidebar .sidebar__info ul li:hover span {
+    color:#000;
+}
+.sidebar .sidebar__info ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 30px;
+    gap: 20px;
+}
+.sidebar .sidebar__info ul li a i {
+    font-size: 30px;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.sidebar .sidebar__info ul li a span {
+    width: 100%;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+/* SideBar */
+
+/* Dashboard */
+.dashboard {
+    color: var(--primary);
     position: absolute;
     right: 0;
     top: 55px;
     bottom: 55px;
     width: 80%;
     margin-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-template-rows: 30% 67%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px 30px;
+    gap: 20px;
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    /* display: none; */
+}
+.dashboard .revenue {
+    grid-area: 1/1/2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.dashboard .orders {
+    grid-area: 1/3/2/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.dashboard .gifts {
+    grid-area: 1/5/2/7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.dashboard .status__users {
+    grid-area: 2/1/3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.dashboard .status__orders {
+    grid-area: 2/4/3/7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--primary);
+    border-radius: 40px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+/* Dashboard */
+
+/* Users */
+.users {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    bottom: 55px;
+    width: 80%;
+    margin-right: 30px;
+    display: none;
 }
 .main__overlay {
     position: absolute;
@@ -32,7 +244,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,12 +255,11 @@ main {
     gap: 50px;
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
 }
-/* Users */
 .main__overlay .users__list {
     width: 100%;
     height: 50%;
     padding: 30px 30px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--primary);
     border-radius: 40px;
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
@@ -67,7 +278,7 @@ main {
     width: 100%;
     border-radius: 20px;
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
 }
 .main__overlay .users__list .users__list-items h1 {
@@ -120,7 +331,7 @@ main {
     height: 80%;
     width: 100%;
     color:#fff;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
 }
@@ -165,7 +376,7 @@ main {
     width: 100%;
     height: 50%;
     padding: 30px 30px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--primary);
     border-radius: 40px;
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
@@ -181,7 +392,7 @@ main {
     align-items: center;
     gap: 30px;
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
 }
@@ -250,7 +461,7 @@ main {
     height: 80%;
     width: 100%;
     color:#fff;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
 }

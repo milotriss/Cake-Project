@@ -135,17 +135,16 @@ main {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 20px 20px;
 }
 .main__overlay .details {
     width: 60%;
     height: 100%;
     gap: 40px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 20px 20px;
     box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
-    background-color: rgba(0, 0, 0, 0.15);
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     display: flex;
@@ -159,7 +158,7 @@ main {
     align-items: center;
     gap: 10px;
     box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.4);
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     overflow: hidden;
@@ -194,7 +193,7 @@ main {
     align-items: flex-start;
     padding: 20px 20px;
     box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.4);
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     overflow: hidden;
@@ -235,7 +234,7 @@ main {
 }
 .main__overlay .details .details__right .details__right-add button:first-child {
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     color: var(--primary);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     border: 0.5px solid var(--primary);
@@ -262,7 +261,7 @@ main {
     border: 1px solid var(--primary);
     border-radius: 5px;
     outline: none;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     color: var(--primary);
     box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
 }
@@ -272,7 +271,7 @@ main {
     border: 1px solid var(--primary);
     border-radius: 5px;
     outline: none;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     color: var(--primary);
     font-size: 18px;
     box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
@@ -282,6 +281,23 @@ main {
     color: #fff;
     transform: scale(1.05);
 }
+.main__overlay .details .details__right .details__right-brands {
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    width: 100%;
+}
+.main__overlay .details .details__right .details__right-brands i {
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.main__overlay .details .details__right .details__right-brands i:hover {
+    transform: scale(1.2);
+}
 
 
 
@@ -290,7 +306,7 @@ main {
     height: 100%;
     padding: 20px 20px;
     box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.4);
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     display: flex;
@@ -310,7 +326,7 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 30px;
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
@@ -343,6 +359,8 @@ main {
 }
 .main__overlay .products figure figcaption h1 {
     color: var(--primary);
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 25px;
 }
 .main__overlay .products figure figcaption span {
     letter-spacing: 3px;

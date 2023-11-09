@@ -50,3 +50,45 @@ function renderMainSidebar() {
   </div>`;
 }
 renderMainSidebar()
+
+//
+function renderMainHeader(){
+  const mainHeader = document.getElementById("mainheader")
+  mainHeader.innerHTML = `<img
+  src="https://toppng.com/uploads/preview/image-library-library-cupcake-birthday-cake-torte-simple-bakery-cupcake-logo-11562961286zthqttjrf1.png"
+  alt=""
+/>
+<div class="login">
+  <button onclick="login()" type="submit">Login</button>
+  <button type="submit">
+    <i class="fa-solid fa-cart-plus"></i>
+  </button>
+</div>`
+}
+renderMainHeader()
+//
+
+function login(){
+  window.location.href = "./page/User/login/login.html"
+}
+
+// active cho 3 cham //
+const dots = document.querySelectorAll('.home__dot')
+const itemActive = document.querySelectorAll('.item__active')
+
+dots.forEach((item,index)=>{
+  item.addEventListener('click', function(){
+
+    //xoá hết active trước khi thêm vào
+    dots.forEach(item =>{
+      item.classList.remove('active')
+    })
+    itemActive.forEach(item =>{
+      item.classList.remove('active')
+    })
+    //xoá hết active trước khi thêm vào
+
+    item.classList.add('active')
+    itemActive[index].classList.add('active')
+  })
+})

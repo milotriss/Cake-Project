@@ -14,19 +14,39 @@
       rel="stylesheet"
       href="../../../vendors/themify-icons/themify-icons.css"
     />
-    <link rel="stylesheet" href="../../../components/nav.css">
-    <link rel="stylesheet" href="./detail.css" />
+    <link rel="stylesheet" href="../../../components/nav.css" />
+    <link rel="stylesheet" href="../../../components/header.css" />
+    <link rel="stylesheet" href="./products.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header>
-    </header>
-    <nav id="nav"></nav>
-    <script src="../../../index.js"></script>
-    <main>
-    </main>
+    <div class="products__overlay">
+      <header id="mainheader"></header>
+      <nav id="nav"></nav>
+      <script src="../../../index.js"></script>
+      <main>
+        <div class="catagory">
+          <ul>
+            <li>Cake & Deserts</li>
+            <li>Bread</li>
+            <li>Cookie & Biscuit</li>
+            <li>Burger & Pizza</li>
+            <li>Donuts</li>
+            <li>Pancake & Waffle</li>
+          </ul>
+          <div class="catagory__search">
+            <input placeholder="Search..." type="text">
+            <i class="ti-search"></i>
+          </div>
+        </div>
+        <section id="products__items">
+
+        </section>
+      </main>
+    </div>
+    <script src="./products.js"></script>
   </body>
 </html>

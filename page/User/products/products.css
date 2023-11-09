@@ -1,6 +1,197 @@
-body{
+body {
+    background-image: url("../../../assets/images/cake2/3360x1680.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+.products__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.products__overlay main {
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 10px;
+}
+main .catagory {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+main .catagory ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0.5px solid var(--primary);
+    border-radius: 30px;
+    gap: 50px;
+}
+main .catagory ul li {
+    padding: 10px 0;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+main .catagory ul li:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+main .catagory .catagory__search {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0.5px solid var(--primary);
+    border-radius: 30px;
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+}
+main .catagory .catagory__search input {
+    width: 100%;
+    padding: 12px 80px 12px 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: var(--primary);
+}
+main .catagory .catagory__search input::placeholder {
+    color: #999;
+}
+main .catagory .catagory__search i {
+    display: block;
+    position: absolute;
+    padding: 10px 20px;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    font-size: 20px;
+    background-color: var(--primary);
+    border-radius: 20px;
+    cursor: pointer;
+}
+main ul li {
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(147, 145, 145, 0.5);
+    cursor: pointer;
+}
+main section {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    padding: 20px 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    border: 0.5px solid var(--primary);
+}
+main section::-webkit-scrollbar {
+    display: none;
+}
+main section figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    width: 32.3%;
+    height: 31.5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 20px;
+}
+main section figure img {
+    object-fit: cover;
+    height: 100%;
+    width: 40%;
+}
+main section figcaption {
+    padding: 20px 30px 20px 0;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--primary);
+    gap: 10%;
+}
+main section figcaption h1 {
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 25px;
+}
+main section figcaption p {
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+main section figcaption span {
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+main section figcaption .details__add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10%;
+}
+main section figcaption .details__add button {
+    padding: 6px 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--primary);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 30%;
+    font-size: 14px;
+}
+main section figcaption .details__add button:hover {
+    background: linear-gradient(90deg, var(--primary), rgba(17, 194, 179, 0.192));
+    color: #fff;
+    transform: scale(1.05);
+}
+main section figcaption .details__add .details__quantity {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+    overflow: hidden;
+}
+main section figcaption .details__add input {
+    padding: 6px 8px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--primary);
+    box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
+    width: 60%;
 }

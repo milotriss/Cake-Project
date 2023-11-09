@@ -12,19 +12,6 @@ header {
     height: 130px;
     /* display: none; */
 }
-
-header .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-}
-header .search .search__items {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-}
 header img {
     width: 100px;
     height: 100px;
@@ -79,14 +66,11 @@ header .login button:last-child {
     border: none;
     background-color: transparent;
     border-radius: 50%;
-    border: 1px solid var(--primary);
-    transition: 0.2s;
+    transition: 0.3s;
 }
 header .login button:last-child:hover {
-    background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
-    border: 1px solid #fff;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 header .login button:last-child:hover i {
     color: #fff;
@@ -95,7 +79,7 @@ header .login button:last-child i {
     padding: 9px 9px;
     background-color: transparent;
     border: none;
-    font-size: 14px;
+    font-size: 30px;
     color: var(--primary);
 }
 @media (min-width: 768px) and (max-width: 1024px){

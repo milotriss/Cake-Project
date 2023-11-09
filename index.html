@@ -6,40 +6,28 @@
     <title>Cake-Project</title>
     <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./vendors/gridd/grid.css">
-    <link rel="stylesheet" href="./home:css/header.css">
+    <link rel="stylesheet" href="./components/header.css">
     <link rel="stylesheet" href="./components/nav.css">
     <link rel="stylesheet" href="./home:css/main.css">
     <link rel="stylesheet" href="./vendors/fontawesome-free-6.4.2-web/css/all.css">
     <link rel="stylesheet" href="./vendors/themify-icons/themify-icons.css">
     <link
-      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
     />
   </head>
   <body>
-    <header>
-      <img
-        src="https://toppng.com/uploads/preview/image-library-library-cupcake-birthday-cake-torte-simple-bakery-cupcake-logo-11562961286zthqttjrf1.png"
-        alt=""
-      />
-      <div class="search">
-        <div class="search__items">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input placeholder="Search..." type="text" />
-        </div>
-      </div>
-      <div class="login">
-        <button type="submit">Login</button>
-        <button type="submit">
-          <i class="fa-solid fa-user"></i>
-        </button>
-      </div>
+    <header id="mainheader">
     </header>
     <nav id="nav">
     </nav>
-    <script src="./index.js"></script>
+    <div class="home__dots">
+      <span class="home__dot active"></span>
+      <span class="home__dot "></span>
+      <span class="home__dot "></span>
+    </div>
     <main>
-      <section class="home">
+      <section class="home item__active active">
         <div class="overlay">
           <img
             src="https://toppng.com/uploads/preview/image-library-library-cupcake-birthday-cake-torte-simple-bakery-cupcake-logo-11562961286zthqttjrf1.png"
@@ -52,10 +40,10 @@
             handcrafted bakery made with quality ingredients. Once you try our
             delicious bakery, we know you will be coming back for more.
           </p>
-          <button class="btn__big" type="submit">SHOP NOW</button>
+          <button onclick="login()" class="btn__big" type="submit">SHOP NOW</button>
         </div>
       </section>
-      <section class="saleoff">
+      <section class="saleoff item__active">
         <div class="overlay">
           <div class="sale__group">
             <button class="sale1">
@@ -69,10 +57,10 @@
               <p>25% off for new member</p>
             </button>
           </div>
-          <button class="btn__big" type="submit">MORE SALE OFF</button>
+          <button onclick="login()" class="btn__big" type="submit">MORE SALE OFF</button>
         </div>
       </section>
-      <section class="about">
+      <section class="about item__active">
         <div class="overlay">
           <div class="about__top">
             <article class="about__us">
@@ -196,10 +184,7 @@
         </div>
       </section>
     </main>
-    <div class="home__dots">
-      <span class="home__dot dot1"></span>
-      <span class="home__dot dot2"></span>
-      <span class="home__dot dot3"></span>
-    </div>
+    <script src="./index.js"></script>
+    <script src="./models/products.js"></script>
   </body>
 </html>
