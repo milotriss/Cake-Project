@@ -1,9 +1,54 @@
+function addCart(id){
+    let dbProducts = JSON.parse(localStorage.getItem('products'))
+    let dbUser = JSON.parse(localStorage.getItem('users'))
+    let input = document.querySelector('.input-cart')
+    let inputValue = input.value
+    let cartItems = dbUser.find((item,index)=>{
+        return item.id == id
+    })
+    let cart = cartItems.carts
+    console.log(cart);
+    let newDbProducts = dbProducts.find((item,index)=>{
+        return item.id == id
+    })
+    // console.log(newDbProducts);
+
+    const checkCart = cart.find(item => {
+        return item.id == id
+    }) //kiểm tra xem trong cart sản phẩm mình đang mua có hay chưa
+
+
+    if (checkCart) {
+        const newCart = cart.map(function (item, index) {
+            if (item.id == newDbProducts.id) {
+                return {
+                    ...item,
+                    quantity: item.quantity + 1
+                }
+            } else {
+                return item
+            }
+        })
+        localStorage.setItem('cart', JSON.stringify(newCart))
+    } else {
+        cart.push({
+            ...newDbProducts, //toán tử spread => dùng để copy toàn bộ object hoặc array
+            quantity: inputValue
+        })
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }
+
+    renderCart()
+}
+
 function renderCart(){
     let db = JSON.parse(localStorage.getItem('products'))
-    let dbCart = JSON.parse(localStorage.getItem('carts'))
-    console.log(dbCart);
+    let dbCart = JSON.parse(localStorage.getItem('cart'))
+    // console.log(dbCart);
+
     let listCart = document.querySelector('.list-cart')
     // console.log(listCart);
+
     listCart.innerHTML = ""
     dbCart.forEach((item,index) =>{
         listCart.innerHTML+=
@@ -32,30 +77,5 @@ function renderCart(){
     renderTotalPrice.innerText = totalPrice
 
 }
-renderCart
+renderCart()
 
-function addCart(id){
-    let dbProducts = JSON.parse(localStorage.getItem('products'))
-    let dbUser = JSON.parse(localStorage.getItem('users'))
-    let input = document.querySelector('.input-cart')
-    let inputValue = input.value
-    let cart = dbUser.find((item,index)=>{
-        return item.id == id
-    })
-    // console.log(cart.carts);
-    let newDbProducts = dbProducts.find((item,index)=>{
-        return item.id == id
-    })
-    // console.log(newDbProducts);
-    const newCart = {
-        ...newDbProducts,
-        quantity : inputValue,
-    }
-    // console.log(newCart);
-
-    let myCart = cart.carts
-    myCart.push(newCart)
-    console.log(myCart, "aaa");
-    localStorage.setItem('carts',JSON.stringify(myCart))
-    renderCart()
-}
