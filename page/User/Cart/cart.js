@@ -7,7 +7,8 @@ function addCart(id){
         return item.id == id
     })
     let cart = cartItems.carts
-    console.log(cart);
+    // console.log(cart);
+
     let newDbProducts = dbProducts.find((item,index)=>{
         return item.id == id
     })
@@ -27,7 +28,7 @@ function addCart(id){
                 return item
             }
         })
-        localStorage.setItem('cart', JSON.stringify(newCart))
+        localStorage.setItem('cart', JSON.stringify(cart))
     } else {
         cart.push({
             ...newDbProducts,
@@ -35,7 +36,7 @@ function addCart(id){
         })
         localStorage.setItem('cart', JSON.stringify(cart))
     }
-
+    document.querySelector('.input-cart').value = 1
     renderCart()
 }
 
