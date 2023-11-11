@@ -15,9 +15,7 @@ function addCart(id){
 
     const checkCart = cart.find(item => {
         return item.id == id
-    }) //kiểm tra xem trong cart sản phẩm mình đang mua có hay chưa
-
-
+    }) 
     if (checkCart) {
         const newCart = cart.map(function (item, index) {
             if (item.id == newDbProducts.id) {
@@ -32,7 +30,7 @@ function addCart(id){
         localStorage.setItem('cart', JSON.stringify(newCart))
     } else {
         cart.push({
-            ...newDbProducts, //toán tử spread => dùng để copy toàn bộ object hoặc array
+            ...newDbProducts,
             quantity: inputValue
         })
         localStorage.setItem('cart', JSON.stringify(cart))
