@@ -51,6 +51,7 @@ main .catagory ul li {
     padding: 10px 0;
     transition: 0.3s;
     opacity: 0.8;
+    width: 16%;
 }
 main .catagory ul li:hover {
     transform: scale(1.2);
@@ -98,14 +99,11 @@ main ul li {
 }
 main section {
     width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     padding: 20px 20px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
     gap: 1.5%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -116,11 +114,11 @@ main section::-webkit-scrollbar {
 }
 main section figure {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    gap: 5%;
-    width: 32.3%;
-    height: 31.5%;
+    gap: 20px;
+    width: 100%;
+    height: 300px;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
     border-radius: 20px;
@@ -129,6 +127,11 @@ main section figure img {
     object-fit: cover;
     height: 100%;
     width: 40%;
+    transition: 0.3s;
+}
+main section figure img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 main section figcaption {
     padding: 20px 30px 20px 0;
@@ -195,4 +198,11 @@ main section figcaption .details__add input {
     box-shadow: 2px 2px 2px rgba(103, 102, 102, 0.5);
     width: 50%;
     text-align: center;
+}
+
+
+/* active */
+.list-category.active-category {
+    transform: scale(1.2);
+    opacity: 1;
 }

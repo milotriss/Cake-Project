@@ -123,20 +123,21 @@ body {
 .sidebar .sidebar__info ul li:hover span {
     color:#000;
 }
-.sidebar .sidebar__info ul li a {
+.sidebar .sidebar__info ul li {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     padding: 0 0 0 30px;
     gap: 20px;
+    cursor: pointer;
 }
-.sidebar .sidebar__info ul li a i {
+.sidebar .sidebar__info ul li  i {
     font-size: 30px;
     color: var(--primary);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.sidebar .sidebar__info ul li a span {
+.sidebar .sidebar__info ul li span {
     width: 100%;
     font-weight: 600;
     color: var(--primary);

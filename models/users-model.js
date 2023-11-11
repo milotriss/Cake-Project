@@ -7,18 +7,7 @@ let users = [
     confirmPw: "lamvuyvy98",
     role: 1, // vai tro admin or user
     status: 1, // trang thai bi cam hay ko
-    carts: [
-        {
-        idProducts:1,
-        productName:'ten san pham',
-        price: 999,
-        isDelete: 1, //soft delete 
-        img:[],
-        desc:'mo ta',
-        phone:'12345',
-        quantity: 1,
-        }
-    ],
+    carts: [],
 }
 ]
 if (!JSON.parse(localStorage.getItem("users"))) {

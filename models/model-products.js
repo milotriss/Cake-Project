@@ -6,7 +6,7 @@ const products = [
     stock: 19, // ton kho
     isDelete: 1, //soft delete //cho admin 2, cho user 1
     img: "../assets/images/cake&deserts/British Victoria Sandwich Sponge cake 维多利亚海绵蛋糕.jpeg",
-    desc: "",
+    desc: "mo ta",
     category: "Cake & Deserts",
   },
   {
@@ -22,7 +22,7 @@ const products = [
   {
     idProducts: 3,
     productName: "Chocolate and Caramel Mousse Cake",
-    price: "",
+    price: "49000",
     stock: 19, // ton kho
     isDelete: 1, //soft delete //cho admin 2, cho user 1
     img: "../assets/images/cake&deserts/Chocolate and Caramel Mousse Cake - Julie Marie Eats.jpeg",
@@ -32,7 +32,7 @@ const products = [
   {
     idProducts: 4,
     productName: "Oreo Cake",
-    price: "",
+    price: "59000",
     stock: 19, // ton kho
     isDelete: 1, //soft delete //cho admin 2, cho user 1
     img: "../assets/images/cake&deserts/Oreo cake 奥利奥蛋糕.jpeg",
@@ -42,7 +42,7 @@ const products = [
   {
     idProducts: 5,
     productName: "Pumpkin Yogurt Cake",
-    price: "",
+    price: "49000",
     stock: 19, // ton kho
     isDelete: 1, //soft delete //cho admin 2, cho user 1
     img: "../assets/images/cake&deserts/pumpkin yogurt cake 南瓜酸奶蛋糕.jpeg",
@@ -51,8 +51,8 @@ const products = [
   },
   {
     idProducts: 6,
-    productName: "Sweet Tooth Girl",
-    price: "39000",
+    productName: "Sweet Tooth Girl (2 pieces)",
+    price: "29000",
     stock: 19, // ton kho
     isDelete: 1, //soft delete //cho admin 2, cho user 1
     img: "../assets/images/cake&deserts/Sweet Tooth Girl.jpeg",
@@ -111,8 +111,8 @@ const products = [
   },
   {
     idProducts: 12,
-    productName: "Focaccia-Gaz Oakley",
-    price: "",
+    productName: "Focaccia-Gaz Oakley (25x30)",
+    price: "139000",
     stock: 19, // ton kho
     isDelete: 1, //soft delete //cho admin 2, cho user 1
     img: "../assets/images/bread/Focaccia - Gaz Oakley.jpeg",

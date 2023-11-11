@@ -29,7 +29,7 @@ body{
     gap: 100px;
     overflow: hidden;
     border: 2px solid #fff;
-    /* display: none; */
+    display: none;
 }
 .login__overlay .signin .signin__left {
     width: 55%;
@@ -283,19 +283,7 @@ body{
     font-family: 'Lobster Two', sans-serif;
     letter-spacing: 5px;
 }
-.login__overlay .signup .signup__left .signup__left-overlay button {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    border: 1px solid #65DACB;
-    padding: 10px 40px;
-    border-radius: 25px;
-    transition: 0.3s;
-    text-transform: uppercase;
-}
-.login__overlay .signup .signup__left .signup__left-overlay button:hover {
-    background: linear-gradient(45deg, #65dacae9, rgba(25, 233, 230, 0.341));
-    transform: scale(1.06);
-}
+
 .login__overlay .signup .signup__left .signup__left-overlay p{
     font-size: 16px;
     text-align: center;

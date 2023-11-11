@@ -6,19 +6,19 @@ function renderMainSidebar() {
   <div class="nav__top">
     <ul>
       <li>
-        <a href="#">
+        <a href="./index.html">
           <i class="fa-solid fa-house"></i>
           <span>Home</span>
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="./page/User/location/contact.html">
           <i class="fa-solid fa-location-dot"></i>
           <span>Contact</span>
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="./page/User/products/products.html">
           <i class="fa-solid fa-store"></i>
           <span>Shop</span>
         </a>
@@ -63,15 +63,13 @@ function renderMainHeader(){
     <button onclick="login()" type="submit">Login</button>
     <button type="submit">
       <i class="fa-solid fa-cart-plus"></i>
+      <span>1</span>
     </button>
   </div>`
 }
 renderMainHeader()
-//
 
-function login(){
-  window.location.href = "./page/User/login/login.html"
-}
+
 
 // active cho 3 cham //
 const dots = document.querySelectorAll('.home__dot')
