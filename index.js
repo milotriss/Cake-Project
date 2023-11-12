@@ -61,9 +61,7 @@ function renderMainHeader(){
   />
   <div class="login">
     <button onclick="login()" type="submit">Login</button>
-    <button type="submit">
-      <i class="fa-solid fa-cart-plus"></i>
-      <span>1</span>
+    <button class="count-products" type="submit">
     </button>
   </div>`
 }

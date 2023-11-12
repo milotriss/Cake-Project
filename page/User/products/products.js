@@ -71,8 +71,3 @@ function renderDetails(id){
   window.location.href = `../details/details.html?id=${id}`
 }
 
-//Add to cart
-function addCart(){
-  let db = JSON.parse(localStorage.getItem('products'))
-  
-}
