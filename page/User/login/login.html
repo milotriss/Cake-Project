@@ -21,15 +21,15 @@
           <div class="signin__import">
             <fieldset>
               <legend>Email</legend>
-              <input placeholder="Your Email" type="email" />
+              <input id="email-signin" placeholder="Your Email" type="email" />
               <i class="fa-solid fa-envelope"></i>
             </fieldset>
             <fieldset>
               <legend>Password</legend>
-              <input placeholder="Your Password" type="password" />
+              <input id="password-signin" placeholder="Your Password" type="password" />
               <i class="fa-solid fa-lock"></i>
             </fieldset>
-            <button type="submit">sign in</button>
+            <button onclick="signInAccount()" type="submit">sign in</button>
           </div>
           <div class="signin__or">
             <span></span>
@@ -58,17 +58,18 @@
           <div class="signin__right-overlay">
             <h1>Wellcome to</h1>
             <h2>1990 Bakery</h2>
-            <button>Sign Up</button>
+            <button onclick="signUp()">Sign Up</button>
             <p>Sign up now to take 25% discount</p>
           </div>
         </div>
       </form>
 
-      <form class="signup">
+      <form id="signup" class="signup">
         <div class="signup__left">
           <div class="signup__left-overlay">
-            <h1>jion with</h1>
+            <h1>join with</h1>
             <h2>1990 Bakery's Family</h2>
+            <button onclick="signIn()">Sign In</button>
             <p>Create a new account to fully enjoy our flavors and services</p>
           </div>
         </div>
@@ -77,29 +78,32 @@
           <div class="signup__import">
             <fieldset>
               <legend>Name *</legend>
-              <input placeholder="Name" type="text" />
+              <input id="name-signup" placeholder="Name" type="text" />
               <i class="fa-solid fa-user"></i>
             </fieldset>
             <fieldset>
               <legend>Email *</legend>
-              <input placeholder="Your Email" type="email" />
+              <input id="email-signup" placeholder="Your Email" type="email" />
               <i class="fa-solid fa-envelope"></i>
             </fieldset>
             <fieldset>
               <legend>Password *</legend>
-              <input placeholder="Your Password" type="password" />
+              <input id="password-signup" placeholder="Your Password" type="password" />
               <i class="fa-solid fa-lock"></i>
             </fieldset>
             <fieldset>
               <legend>Confirm password *</legend>
-              <input placeholder="Confirm Your Password" type="password" />
+              <input id="confirm-password-signup" placeholder="Confirm Your Password" type="password" />
               <i class="fa-solid fa-check-double"></i>
             </fieldset>
-            <button type="submit">creat account</button>
+            <button onclick="signUpAccount()" type="submit">creat account</button>
           </div>
         </div>
       </form>
       <script src="./login.js"></script>
+      <script src="../../../models/users-model.js"></script>
+      <script src="../../../models/model-products.js"></script>
+      <script src="../../../models/orders-model.js"></script>
     </section>
   </body>
 </html>

@@ -17,6 +17,7 @@ function renderProducts() {
         </figcaption>
       </figure>`;
   });
+
 }
 renderProducts()
 
@@ -71,3 +72,29 @@ function renderDetails(id){
   window.location.href = `../details/details.html?id=${id}`
 }
 
+//Search
+function search() {
+  let db = JSON.parse(localStorage.getItem('products'))
+  let searchInput = document.querySelector('.search-input')
+  let listSearch = document.querySelector('.list-search')
+  let searchValue = searchInput.value
+  let newDb = db.filter(item=>{
+  return item.productName.includes(searchValue)
+  })
+  if (searchValue.length) {
+    document.querySelector('.list-search').style.display = 'block'
+    listSearch.innerHTML = ''
+    newDb.forEach(item=>{
+      listSearch.innerHTML += 
+      `
+      <li onclick="renderDetails(${item.idProducts})">
+        <p>${item.productName}</p>
+      </li>
+      `
+    })
+  }else{
+    document.querySelector('.list-search').style.display = "none"
+  }
+  
+  
+}
