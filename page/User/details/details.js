@@ -1,14 +1,16 @@
 //renderDetailsProducts
 function renderDetailProducts(){
     let db = JSON.parse(localStorage.getItem('products'))
+    console.log(db);
     let getUrl = window.location.href
     let id = getUrl.split('=')[1]
-    // console.log(id);
+    console.log(id);
     let newDb = db.find(item=>{
-        return item.idProducts == id
+        return item.id == id
     })
     // console.log(newDb);
     let deTails = document.querySelector('.details')
+    console.log(deTails);
     deTails.innerHTML= `<div class="details__left">
     <img src="../../../${newDb.img}" alt="" />
   </div>
@@ -58,7 +60,7 @@ function renderDetailProducts(){
         listHintProducts.innerHTML +=
         `
         <figure class="hint-products">
-        <img onclick="renderDetails(${item.idProducts})" src="../../../${item.img}" alt="" />
+        <img onclick="renderDetails(${item.id})" src="../../../${item.img}" alt="" />
         <figcaption>
           <h1>${item.productName}</h1>
           <p>${item.desc}</p>
@@ -70,4 +72,4 @@ function renderDetailProducts(){
     });
 
 }
-renderDetailProducts() 
+renderDetailProducts()

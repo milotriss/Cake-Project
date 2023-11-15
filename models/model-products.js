@@ -1,6 +1,6 @@
 const products = [
   {
-    idProducts: 1,
+    id: 1,
     productName: "British Victoria Sandwich",
     price: "49000",
     stock: 19, // ton kho
@@ -10,7 +10,7 @@ const products = [
     category: "Cake & Deserts",
   },
   {
-    idProducts: 2,
+    id: 2,
     productName: "Caramel Pudding Cake",
     price: "39000",
     stock: 19, // ton kho
@@ -20,7 +20,7 @@ const products = [
     category: "Cake & Deserts",
   },
   {
-    idProducts: 3,
+    id: 3,
     productName: "Chocolate and Caramel Mousse Cake",
     price: "49000",
     stock: 19, // ton kho
@@ -30,7 +30,7 @@ const products = [
     category: "Cake & Deserts",
   },
   {
-    idProducts: 4,
+    id: 4,
     productName: "Oreo Cake",
     price: "59000",
     stock: 19, // ton kho
@@ -40,7 +40,7 @@ const products = [
     category: "Cake & Deserts",
   },
   {
-    idProducts: 5,
+    id: 5,
     productName: "Pumpkin Yogurt Cake",
     price: "49000",
     stock: 19, // ton kho
@@ -50,7 +50,7 @@ const products = [
     category: "Cake & Deserts",
   },
   {
-    idProducts: 6,
+    id: 6,
     productName: "Sweet Tooth Girl (2 pieces)",
     price: "29000",
     stock: 19, // ton kho
@@ -60,7 +60,7 @@ const products = [
     category: "Cake & Deserts",
   },
   {
-    idProducts: 7,
+    id: 7,
     productName: "Snack Cake",
     price: "59000",
     stock: 19, // ton kho
@@ -70,7 +70,7 @@ const products = [
     category: "Cake & Deserts",
   },
   {
-    idProducts: 8,
+    id: 8,
     productName: "Rice Cake",
     price: "49000",
     stock: 19, // ton kho
@@ -80,7 +80,7 @@ const products = [
     category: "Cake & Deserts",
   },
   {
-    idProducts: 9,
+    id: 9,
     productName: "Loaf Soughdough",
     price: "129000",
     stock: 19, // ton kho
@@ -90,7 +90,7 @@ const products = [
     category: "Bread",
   },
   {
-    idProducts: 10,
+    id: 10,
     productName: "Cinamon Roll",
     price: "39000",
     stock: 19, // ton kho
@@ -100,7 +100,7 @@ const products = [
     category: "Bread",
   },
   {
-    idProducts: 11,
+    id: 11,
     productName: "Pain Au Chocolate",
     price: "59000",
     stock: 19, // ton kho
@@ -110,7 +110,7 @@ const products = [
     category: "Bread",
   },
   {
-    idProducts: 12,
+    id: 12,
     productName: "Focaccia-Gaz Oakley (25x30)",
     price: "139000",
     stock: 19, // ton kho
@@ -120,7 +120,7 @@ const products = [
     category: "Bread",
   },
   {
-    idProducts: 13,
+    id: 13,
     productName: "Maritozzi-Cream",
     price: "49000",
     stock: 19, // ton kho
@@ -130,7 +130,7 @@ const products = [
     category: "Bread",
   },
   {
-    idProducts: 14,
+    id: 14,
     productName: "Croisant Blank",
     price: "49000",
     stock: 19, // ton kho
@@ -140,7 +140,7 @@ const products = [
     category: "Bread",
   },
   {
-    idProducts: 15,
+    id: 15,
     productName: "Toast Bread",
     price: "99000",
     stock: 19, // ton kho
@@ -150,7 +150,7 @@ const products = [
     category: "Bread",
   },
   {
-    idProducts: 16,
+    id: 16,
     productName: "Bacon and Beef Burger",
     price: "89000",
     stock: 19, // ton kho
@@ -160,7 +160,7 @@ const products = [
     category: "Burger & Pizza",
   },
   {
-    idProducts: 17,
+    id: 17,
     productName: "Chicken Burger",
     price: "79000",
     stock: 19, // ton kho
@@ -170,7 +170,7 @@ const products = [
     category: "Burger & Pizza",
   },
   {
-    idProducts: 18,
+    id: 18,
     productName: "Pizza Popolaze",
     price: "129000",
     stock: 19, // ton kho
@@ -180,7 +180,7 @@ const products = [
     category: "Burger & Pizza",
   },
   {
-    idProducts: 19,
+    id: 19,
     productName: "Seafood Pizza",
     price: "159000",
     stock: 19, // ton kho
@@ -190,7 +190,7 @@ const products = [
     category: "Burger & Pizza",
   },
   {
-    idProducts: 20,
+    id: 20,
     productName: "Sunflower Seed Veggie Burger",
     price: "89000",
     stock: 19, // ton kho
@@ -200,7 +200,7 @@ const products = [
     category: "Burger & Pizza",
   },
   {
-    idProducts: 21,
+    id: 21,
     productName: "Vegan Mozzarella Mushroom Burger",
     price: "99000",
     stock: 19, // ton kho
@@ -210,7 +210,7 @@ const products = [
     category: "Burger & Pizza",
   },
   {
-    idProducts: 22,
+    id: 22,
     productName: "Brownie Crinkle Cookies (box)",
     price: "49000",
     stock: 19, // ton kho
@@ -220,7 +220,7 @@ const products = [
     category: "Cookie & Biscuit",
   },
   {
-    idProducts: 23,
+    id: 23,
     productName: "Chocolate cookies (box)",
     price: "49000",
     stock: 19, // ton kho
@@ -230,7 +230,7 @@ const products = [
     category: "Cookie & Biscuit",
   },
   {
-    idProducts: 24,
+    id: 24,
     productName: "Chocolate Hazelnut Cookie (box)",
     price: "49000",
     stock: 19, // ton kho
@@ -240,7 +240,7 @@ const products = [
     category: "Cookie & Biscuit",
   },
   {
-    idProducts: 25,
+    id: 25,
     productName: "Cookie Sandwich Vanilla (box)",
     price: "49000",
     stock: 19, // ton kho
@@ -250,7 +250,7 @@ const products = [
     category: "Cookie & Biscuit",
   },
   {
-    idProducts: 26,
+    id: 26,
     productName: "Lemon Butter Cookie (box)",
     price: "49000",
     stock: 19, // ton kho
@@ -260,7 +260,7 @@ const products = [
     category: "Cookie & Biscuit",
   },
   {
-    idProducts: 27,
+    id: 27,
     productName: "Paleo Coconut Peppermint Patties (box)",
     price: "49000",
     stock: 19, // ton kho
@@ -270,7 +270,7 @@ const products = [
     category: "Cookie & Biscuit",
   },
   {
-    idProducts: 28,
+    id: 28,
     productName: "Scone (2 pieces)",
     price: "39000",
     stock: 19, // ton kho
@@ -280,7 +280,7 @@ const products = [
     category: "Cookie & Biscuit",
   },
   {
-    idProducts: 29,
+    id: 29,
     productName: "Baked Lemon Curd Filled Donuts",
     price: "29000",
     stock: 19, // ton kho
@@ -290,7 +290,7 @@ const products = [
     category: "Donuts",
   },
   {
-    idProducts: 30,
+    id: 30,
     productName: "Bunny Donuts — Sarah Makes Stuff",
     price: "29000",
     stock: 19, // ton kho
@@ -300,7 +300,7 @@ const products = [
     category: "Donuts",
   },
   {
-    idProducts: 31,
+    id: 31,
     productName: "Coconut Donuts",
     price: "29000",
     stock: 19, // ton kho
@@ -310,7 +310,7 @@ const products = [
     category: "Donuts",
   },
   {
-    idProducts: 32,
+    id: 32,
     productName: "Key Lime Coconut Donuts",
     price: "29000",
     stock: 19, // ton kho
@@ -320,7 +320,7 @@ const products = [
     category: "Donuts",
   },
   {
-    idProducts: 33,
+    id: 33,
     productName: "Oreo Cookies and Cream Donuts",
     price: "35000",
     stock: 19, // ton kho
@@ -330,7 +330,7 @@ const products = [
     category: "Donuts",
   },
   {
-    idProducts: 34,
+    id: 34,
     productName: "Mix Donuts (4 pieces random)",
     price: "116000",
     stock: 19, // ton kho
@@ -340,7 +340,7 @@ const products = [
     category: "Donuts",
   },
   {
-    idProducts: 35,
+    id: 35,
     productName: "Vegan Chocolate Marble Glaze",
     price: "29000",
     stock: 19, // ton kho

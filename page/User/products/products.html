@@ -24,32 +24,41 @@
   </head>
   <body>
     <div class="products__overlay">
-      <header id="mainheader"></header>
+      <header id="main-header"></header>
       <nav id="nav"></nav>
       <script src="../../../index.js"></script>
       <main>
         <div class="catagory">
           <ul>
             <li class="list-category active-category">All</li>
-            <li class="list-category" >Cake & Deserts</li>
-            <li class="list-category" >Bread</li>
-            <li class="list-category" >Cookie & Biscuit</li>
-            <li class="list-category"  >Burger & Pizza</li>
-            <li class="list-category" >Donuts</li>
+            <li class="list-category">Cake & Deserts</li>
+            <li class="list-category">Bread</li>
+            <li class="list-category">Cookie & Biscuit</li>
+            <li class="list-category">Burger & Pizza</li>
+            <li class="list-category">Donuts</li>
           </ul>
           <div class="catagory__search">
-            <input class="search-input" oninput="search()" placeholder="Search..." type="text">
+            <input
+              class="search-input"
+              oninput="onSearch()"
+              placeholder="Search..."
+              type="text"
+            />
             <i class="ti-search"></i>
-            <ul class="list-search">
-            </ul>
+            <ul class="list-search"></ul>
           </div>
         </div>
-        <section id="products__items">
-        </section>
+        <section id="products__items"></section>
       </main>
     </div>
     <script src="../../../index.js"></script>
+    <script src="../../../repositories/repositories.js"></script>
+    <script src="../../../services/products.service.js"></script>
+    <script src="../../user/login/login.js"></script>
     <script src="./products.js"></script>
-    <script src="../Cart/cart.js"></script>
+    <script>
+      renderProducts()
+      renderLogout()
+    </script>
   </body>
 </html>

@@ -3,123 +3,30 @@ body{
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
+    position: relative;
 }
 /* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 100px;
-    padding: 5px 100px;
-    background-color: rgba(71, 70, 70, 0.9);
-    height: 12%;
-}
-header .header__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-header .header__logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-header .header__logo h1 {
-    font-family: 'Lobster Two', sans-serif;
-    font-size: 30px;
-    letter-spacing: 3px;
-    color: var(--primary);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-header ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    gap: 20px;
-}
-header ul li {
-    width: 20%;
-    opacity: 0.5;
-    transition: 0.3s;
-}
-header ul li:hover {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
-}
-header ul li:hover i {
-    transform: scale(1.2);
-}
-header ul li a {
-    padding: 45px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-header ul li a i {
-    font-size: 25px;
-    color: var(--primary);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-}
-
-
-header .header__login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header .header__login button:first-child {
-    padding: 10px 30px;
-    border: 1px solid var(--primary);
-    background-color: transparent;
-    color: var(--primary);
-    border-radius: 30px;
-    margin-right: 20px;
-    transition: 0.2s;
-}
-header .header__login button:first-child:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #fff;
-    border: 1px solid #FFF;
-    transform: scale(1.1);
-}
-header .header__login button:last-child {
-    border: none;
-    background-color: transparent;
-    transition: 0.2s;
-}
-header .header__login button:last-child:hover {
-    color: #fff;
-    transform: scale(1.1);
-}
-header .header__login button:last-child:hover i {
-    color: #fff;
-}
-header .header__login button:last-child i {
-    padding: 9px 9px;
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    color: var(--primary);
-}
-/* Header */
-
-
-/* Main */
-main {
+.overlay__detail {
     background-image: url("../../../assets/images/cake2/1292924.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90%;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* Main */
+main {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 13%;
+    left: 8%;
+    border-radius: 30px;
+    overflow: hidden;
 }
 .main__overlay {
     display: flex;

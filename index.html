@@ -4,27 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cake-Project</title>
-    <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./vendors/gridd/grid.css">
-    <link rel="stylesheet" href="./components/header.css">
-    <link rel="stylesheet" href="./components/nav.css">
-    <link rel="stylesheet" href="./home:css/main.css">
-    <link rel="stylesheet" href="./vendors/fontawesome-free-6.4.2-web/css/all.css">
-    <link rel="stylesheet" href="./vendors/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./vendors/gridd/grid.css" />
+    <link rel="stylesheet" href="./components/header.css" />
+    <link rel="stylesheet" href="./components/nav.css" />
+    <link rel="stylesheet" href="./home:css/main.css" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
+      rel="stylesheet"
+      href="./vendors/fontawesome-free-6.4.2-web/css/all.css"
+    />
+    <link rel="stylesheet" href="./vendors/themify-icons/themify-icons.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body>
-    <header id="mainheader">
-    </header>
-    <nav id="nav">
-    </nav>
+    <header id="main-header"></header>
+    <nav id="nav"></nav>
     <div class="home__dots">
       <span class="home__dot active"></span>
-      <span class="home__dot "></span>
-      <span class="home__dot "></span>
+      <span class="home__dot"></span>
+      <span class="home__dot"></span>
     </div>
     <main>
       <section class="home item__active active">
@@ -40,7 +41,9 @@
             handcrafted bakery made with quality ingredients. Once you try our
             delicious bakery, we know you will be coming back for more.
           </p>
-          <button onclick="login()" class="btn__big" type="submit">SHOP NOW</button>
+          <button onclick="login()" class="btn__big" type="submit">
+            SHOP NOW
+          </button>
         </div>
       </section>
       <section class="saleoff item__active">
@@ -57,7 +60,9 @@
               <p>25% off for new member</p>
             </button>
           </div>
-          <button onclick="login()" class="btn__big" type="submit">MORE SALE OFF</button>
+          <button onclick="login()" class="btn__big" type="submit">
+            MORE SALE OFF
+          </button>
         </div>
       </section>
       <section class="about item__active">
@@ -188,5 +193,7 @@
     <script src="./models/users-model.js"></script>
     <script src="./models/orders-model.js"></script>
     <script src="./index.js"></script>
+    <script src="./page/user/login/login.js"></script>
+    <script src="./repositories/repositories.js"></script>
   </body>
 </html>

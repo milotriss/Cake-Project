@@ -1,12 +1,13 @@
 function renderMainSidebar() {
-    const mainSidebar = document.getElementById("nav");
-    mainSidebar.innerHTML = `<div class="sidebar">
+  const mainSidebar = document.getElementById("nav");
+  mainSidebar.innerHTML = `
+    <div class="sidebar">
     <i class="fa-solid fa-bars fa-beat-fade"></i>
   </div>
   <div class="nav__top">
     <ul>
       <li>
-        <a href="./index.html">
+        <a onclick="backHome()">
           <i class="fa-solid fa-house"></i>
           <span>Home</span>
         </a>
@@ -24,13 +25,13 @@ function renderMainSidebar() {
         </a>
       </li>
       <li>
-        <a href="">
+        <a>
           <i class="fa-solid fa-cake-candles"></i>
           <span>Event</span>
         </a>
       </li>
       <li>
-        <a href="">
+        <a>
           <i class="fa-solid fa-shop"></i>
           <span>Workshop</span>
         </a>
@@ -49,43 +50,71 @@ function renderMainSidebar() {
     </button>
   </div>`;
 }
-renderMainSidebar()
+renderMainSidebar();
 
-//
-function renderMainHeader(){
-  const mainHeader = document.getElementById("mainheader")
-  mainHeader.innerHTML = `
+function renderMainHeader() {
+  const header = document.getElementById("main-header");
+  header.innerHTML = `
   <img
   src="https://toppng.com/uploads/preview/image-library-library-cupcake-birthday-cake-torte-simple-bakery-cupcake-logo-11562961286zthqttjrf1.png"
   alt=""
   />
-  <div class="login">
-    <button onclick="login()" type="submit">Login</button>
-    <button class="count-products" type="submit">
-    </button>
-  </div>`
+  <div id="profile">
+    <button class="login-btn" onclick="login()" type="submit">Login</button>
+  </div>`;
 }
-renderMainHeader()
+renderMainHeader();
+
+//Render nut login thanh logout
+// let btnLogin = document.querySelector('.profile')
+// console.log(btnLogin);
 
 
+// Chuyen huong
+function login() {
+  window.location.href = "http://127.0.0.1:5501/page/user/login/login.html";
+}
+function backHome() {
+  window.location.href = "http://127.0.0.1:5501/index.html";
+}
 
 // active cho 3 cham //
-const dots = document.querySelectorAll('.home__dot')
-const itemActive = document.querySelectorAll('.item__active')
+const dots = document.querySelectorAll(".home__dot");
+const itemActive = document.querySelectorAll(".item__active");
 
-dots.forEach((item,index)=>{
-  item.addEventListener('click', function(){
-
-    //xoá hết active trước khi thêm vào
-    dots.forEach(item =>{
-      item.classList.remove('active')
-    })
-    itemActive.forEach(item =>{
-      item.classList.remove('active')
-    })
+dots.forEach((item, index) => {
+  item.addEventListener("click", function () {
+    dots.forEach((item) => {
+      item.classList.remove("active");
+    });
+    itemActive.forEach((item) => {
+      item.classList.remove("active");
+    });
     //xoá hết active trước khi thêm vào
 
-    item.classList.add('active')
-    itemActive[index].classList.add('active')
-  })
-})
+    item.classList.add("active");
+    itemActive[index].classList.add("active");
+  });
+});
+
+function renderLogout(){
+  let dbUserClone = JSON.parse(localStorage.getItem('userClone'))
+  let profile = document.getElementById('profile')
+  if (dbUserClone.length != 0) {
+    profile.innerHTML = 
+    `
+      <span>Hi, ${dbUserClone.name}</span>
+      <p onclick="logout()">Logout</p>
+      <i class="fa-solid fa-cart-plus">
+        <div id="count-cart">1</div>
+      </i>
+    `
+  }
+}
+renderLogout()
+function logout(){
+  let dbUserClone = JSON.parse(localStorage.getItem('userClone'))
+  dbUserClone=[]
+  localStorage.setItem('userClone',JSON.stringify(dbUserClone))
+  window.location.reload()
+}

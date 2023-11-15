@@ -47,54 +47,85 @@ header .login {
     justify-content: center;
     align-items: center;
 }
-header .login button:first-child {
+.login-btn{
     padding: 10px 30px;
     border: 1px solid var(--primary);
     background-color: transparent;
     color: var(--primary);
     border-radius: 30px;
-    margin-right: 20px;
     transition: 0.2s;
+    font-size: 18px;
 }
-header .login button:first-child:hover {
+.login-btn:hover {
     background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
     border: 1px solid #FFF;
     transform: scale(1.1);
 }
-header .login button:last-child {
-    border: none;
-    background-color: transparent;
-    border-radius: 50%;
-    transition: 0.3s;
-    position: relative;
-}
-header .login button:last-child:hover {
-    color: #fff;
-    transform: scale(1.2);
-}
-header .login button:last-child:hover i {
-    color: #fff;
-}
-header .login button:last-child i {
-    padding: 9px 9px;
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
+#profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 400px;
+    height: 100%;
     color: var(--primary);
 }
-header .login button:last-child span {
+#profile span {
+    width: 65%;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+#profile span:hover {
+    transform: scale(1.09);
+    border: 1px solid #fff;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#profile p {
+    text-align: center;
+    width: 35%;
+    padding: 10px 25px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#profile p:hover {
+    transform: scale(1.09);
+    border: 1px solid #fff;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.fa-cart-plus{
+    font-size: 35px;
+    position: relative;
+}
+#count-cart {
+    position: absolute;
+    top: -10px;
+    right: -5px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: red;
     color: #fff;
-    border: 2px solid #fff;
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    text-align: center;
-} 
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+}
+
+
+
 @media (min-width: 768px) and (max-width: 1024px){
     header img {
         display: none;

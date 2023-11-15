@@ -54,24 +54,6 @@ body {
     border-radius: 50%;
 }
 
-.bg__contact .overlay header button {
-    padding: 10px 30px;
-    border: 1px solid var(--primary);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--primary);
-    border-radius: 30px;
-    margin-right: 20px;
-    transition: 0.2s;
-    font-size: 18px;
-    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5); 
-}
-.bg__contact .overlay header button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #fff;    
-    border: 1px solid #FFF;
-    transform: scale(1.1);
-}
 
 /* Header */
 
