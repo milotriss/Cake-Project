@@ -1,16 +1,12 @@
 //renderDetailsProducts
 function renderDetailProducts(){
     let db = JSON.parse(localStorage.getItem('products'))
-    console.log(db);
     let getUrl = window.location.href
     let id = getUrl.split('=')[1]
-    console.log(id);
-    let newDb = db.find(item=>{
+    let newDb = db.find((item)=>{
         return item.id == id
     })
-    // console.log(newDb);
     let deTails = document.querySelector('.details')
-    console.log(deTails);
     deTails.innerHTML= `<div class="details__left">
     <img src="../../../${newDb.img}" alt="" />
   </div>
@@ -31,9 +27,9 @@ function renderDetailProducts(){
     </p>
     <span>San pham con: ${newDb.stock}</span>
     <div class="details__right-add">
-      <button onclick="addCart()">ADD+</button>
+      <button onclick="addCartDetails(${newDb.id})">ADD+</button>
       <div class="details__right-quantity">
-        <input class="input-cart" type="text" />
+        <input value="1" min="1" max="${newDb.stock}" class="quantity-products" type="text" />
       </div>
     </div>
     <div class="details__right-brands">
@@ -73,3 +69,29 @@ function renderDetailProducts(){
 
 }
 renderDetailProducts()
+
+// Add cart(details)
+function addCartDetails(id,index){
+  let dbUserClone = getAllItems("userClone");
+  let dbUsers = getAllItems("users");
+
+  let inputResult = document.querySelectorAll(".quantity-products")[index].value;
+  if (inputResult == "") {
+    alert("hay nhap so luong san pham ban muon them vao gio hang");
+  }
+
+  let dbProduct = getAllItems("products");
+  let myProducts = dbProduct.find((item) => {
+    return item.id == id;
+  });
+
+  if (myProducts.stock < inputResult) {
+    return alert("Sarn pham k du");
+  }
+
+  let checkIndex = dbUsers.findIndex((item,index)=>{
+    return item.id == dbUserClone.id
+  })
+
+
+}

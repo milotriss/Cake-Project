@@ -60,7 +60,7 @@ function renderMainHeader() {
   alt=""
   />
   <div id="profile">
-    <button class="login-btn" onclick="login()" type="submit">Login</button>
+    <button class="login-btn" onclick="loginHeader()" type="submit">Login</button>
   </div>`;
 }
 renderMainHeader();
@@ -71,8 +71,17 @@ renderMainHeader();
 
 
 // Chuyen huong
+function loginHeader(){
+  window.location.href = "http://127.0.0.1:5501/page/user/login/login.html"; 
+}
 function login() {
-  window.location.href = "http://127.0.0.1:5501/page/user/login/login.html";
+  let dbUserClone = JSON.parse(localStorage.getItem('userClone'))
+  console.log(dbUserClone);
+  if (dbUserClone == {}) {
+    window.location.href = "http://127.0.0.1:5501/page/user/login/login.html"; 
+  }else{
+    window.location.href = "http://127.0.0.1:5501/page/user/products/products.html";
+  }
 }
 function backHome() {
   window.location.href = "http://127.0.0.1:5501/index.html";
@@ -105,8 +114,7 @@ function renderLogout(){
     `
       <span>Hi, ${dbUserClone.name}</span>
       <p onclick="logout()">Logout</p>
-      <i class="fa-solid fa-cart-plus">
-        <div id="count-cart">1</div>
+      <i id="icon-cart" onclick="goToCart()" class="fa-solid fa-cart-plus">
       </i>
     `
   }
@@ -118,3 +126,17 @@ function logout(){
   localStorage.setItem('userClone',JSON.stringify(dbUserClone))
   window.location.reload()
 }
+function goToCart(){
+  window.location.href = "http://127.0.0.1:5501/page/user/cart/cart.html"
+}
+function renderCount(){
+  let dbUsers = JSON.parse(localStorage.getItem('users'))
+  let count = document.getElementById('icon-cart')
+  dbUsers.forEach(item=>{
+    count.innerHTML = 
+    `
+    <div id="count-cart">${item.carts.length}</div>
+    `
+  })
+}
+renderCount()

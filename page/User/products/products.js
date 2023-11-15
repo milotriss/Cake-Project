@@ -9,7 +9,7 @@ function renderProducts() {
         <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
         <figcaption>
           <h1>${item.productName}</h1>
-          <p>${item.price}</p>
+          <p>${item.price.toLocaleString() + " VND"}</p>
           <span>Con lai: ${item.stock}</span>
           <div class="details__add">
             <button onclick="onAddCart(${item.id},${index})">ADD+</button>
@@ -53,7 +53,7 @@ function renderCategory(data) {
         <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
         <figcaption>
           <h1>${item.productName}</h1>
-          <p>${item.price}</p>
+          <p>${item.price.toLocaleString() + " VND"}</p>
           <span>Con lai: ${item.stock}</span>
           <div class="details__add">
             <button onclick="onAddCart(${item.id},${index})">ADD+</button>
@@ -85,14 +85,12 @@ function onSearch() {
   }
 }
 
-// Add cart
+// Add cart(products)
 function onAddCart(id, index) {
   let dbUserClone = getAllItems("userClone");
-  // console.log(dbUserClone, "clone");
   let dbUsers = getAllItems("users");
-  // console.log(dbUsers, 'dbUsers');
-  let inputResult =
-    document.querySelectorAll(".quantity-products")[index].value;
+
+  let inputResult = document.querySelectorAll(".quantity-products")[index].value;
   if (inputResult == "") {
     alert("hay nhap so luong san pham ban muon them vao gio hang");
   }
@@ -110,16 +108,16 @@ function onAddCart(id, index) {
     return item.id == dbUserClone.id;
   });
   if (checkIndex != -1) {
+    
     const cart = dbUsers[checkIndex].carts;
 
-    let checkCart = cart.findIndex((item) => item.id == id);
-    if (checkCart != -1) {
-      console.log("zo2");
+    let checkProducts = cart.findIndex((item) => item.id == id);
+
+    if (checkProducts != -1) {
       let result = dbUsers[checkIndex].carts.map((item, index) => {
-        if (index == checkCart) {
-          console.log("zo");
-          console.log(item.quantity, inputResult);
-          console.log(+item.quantity + +inputResult);
+        if (index == checkProducts) {
+          // console.log(item.quantity, inputResult);
+          // console.log(+item.quantity + +inputResult);
           return {
             ...item,
             quantity: +item.quantity + +inputResult,
@@ -128,7 +126,7 @@ function onAddCart(id, index) {
         return item;
       });
       dbUsers[checkIndex].carts = result
-      console.log(dbUsers);
+      // console.log(dbUsers);
       localStorage.setItem("users", JSON.stringify(dbUsers));
     } else {
       dbUsers[checkIndex].carts.push({
@@ -139,39 +137,8 @@ function onAddCart(id, index) {
 
       localStorage.setItem("users", JSON.stringify(dbUsers));
     }
-
-    // dbUsers.forEach((item,i) =>{
-    // if (item.id == dbUserClone.id) {
-    //   let dbProduct = getAllItems('products');
-    //   let myProducts = dbProduct.find(item =>{
-    //     return item.id == id
-    //   })
-    //   let inputResult = document.querySelectorAll('.quantity-products')[index].value;
-    //   console.log(inputResult);
-    //   if (inputResult<myProducts.stock) {
-    //     let checkCart = item.carts.findIndex((item, index)=>{
-    //       if (checkCart != -1) {
-    //         let object = {
-    //           ...myProducts,
-    //           quantity: inputResult,
-    //         }
-    //         item.carts.push(object);
-    //       }else{
-    //         let object2 = {
-    //           ...myProducts,
-    //           quantity: quantity += inputResult,
-    //         }
-    //         item.carts.push(object2)
-    //       }
-
-    //     })
-    //   }else{
-    //     alert('san pham khong du')
-    //   }
-    // }
-    // })
   } else {
     alert("ban hay dang nhap");
   }
-
+  renderCount()
 }
