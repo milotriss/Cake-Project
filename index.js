@@ -21,7 +21,7 @@ function renderMainSidebar() {
       <li>
         <a href="./page/User/products/products.html">
           <i class="fa-solid fa-store"></i>
-          <span>Shop</span>
+          <span onclick="backShop()">Shop</span>
         </a>
       </li>
       <li>
@@ -81,9 +81,11 @@ function login() {
   }
 }
 function backHome() {
+  event.preventDefault()
   window.location.href = "http://127.0.0.1:5501/index.html";
 }
 function backShop() {
+  event.preventDefault()
   window.location.href = "http://127.0.0.1:5501/page/user/products/products.html";
 }
 

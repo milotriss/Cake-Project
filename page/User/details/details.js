@@ -74,13 +74,17 @@ function addCartDetails(id) {
   let dbUsers = getAllItems("users");
   let dbProduct = getAllItems("products");
 
+  if (dbUserClone.length == 0) {
+    alert('ban hay dang nhap')
+  }
+
   let myProducts = dbProduct.find((item) => {
     return item.id == id;
   });
-  console.log(myProducts, "myProducts");
+  // console.log(myProducts, "myProducts");
 
   let inputResult = document.querySelector(".quantity-products").value;
-  console.log(inputResult);
+  // console.log(inputResult);
 
   if (inputResult == "") {
     alert("hay nhap so luong san pham ban muon them vao gio hang");
@@ -140,31 +144,32 @@ function addCartDetails(id) {
   let checkIndex = dbUsers.findIndex((item, index) => {
     return item.id == dbUserClone.id;
   });
+    // console.log(myUser, "mySUser");
+    let checkCart = myUser.carts.findIndex((item) => item.id == myProducts.id);
+    if (checkCart != -1) {
+      let result = dbUsers[checkIndex].carts.map((item, index) => {
+        if (index == checkCart) {
+          // console.log(item.quantity, inputResult);
+          // console.log(+item.quantity + +inputResult);
+          return {
+            ...item,
+            quantity: +item.quantity + +inputResult,
+          };
+        }
+        return item;
+      });
+      dbUsers[checkIndex].carts = result;
+      // console.log(dbUsers);
+      localStorage.setItem("users", JSON.stringify(dbUsers));
+    } else {
+      dbUsers[checkIndex].carts.push({
+        ...myProducts,
+        quantity: Number(inputResult),
+      });
+      console.log(dbUsers);
+      localStorage.setItem("users", JSON.stringify(dbUsers));
+    }
 
-  // console.log(myUser, "mySUser");
-  let checkCart = myUser.carts.findIndex((item) => item.id == myProducts.id);
-  if (checkCart != -1) {
-    let result = dbUsers[checkIndex].carts.map((item, index) => {
-      if (index == checkCart) {
-        // console.log(item.quantity, inputResult);
-        // console.log(+item.quantity + +inputResult);
-        return {
-          ...item,
-          quantity: +item.quantity + +inputResult,
-        };
-      }
-      return item;
-    });
-    dbUsers[checkIndex].carts = result;
-    // console.log(dbUsers);
-    localStorage.setItem("users", JSON.stringify(dbUsers));
-  } else {
-    dbUsers[checkIndex].carts.push({
-      ...myProducts,
-      quantity: Number(inputResult),
-    });
-    console.log(dbUsers);
-    localStorage.setItem("users", JSON.stringify(dbUsers));
-  }
+
   renderCount();
 }

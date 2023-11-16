@@ -187,7 +187,6 @@ body{
     justify-content: center;
     align-items: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    gap: 10px;
 }
 .login__overlay .signin .signin__right .signin__right-overlay h1 {
     font-size: 30px;
@@ -267,7 +266,6 @@ body{
     justify-content: center;
     align-items: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    gap: 20px;
 }
 .login__overlay .signup .signup__left .signup__left-overlay h1 {
     font-size: 30px;
