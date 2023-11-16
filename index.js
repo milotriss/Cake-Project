@@ -65,9 +65,6 @@ function renderMainHeader() {
 }
 renderMainHeader();
 
-//Render nut login thanh logout
-// let btnLogin = document.querySelector('.profile')
-// console.log(btnLogin);
 
 
 // Chuyen huong
@@ -85,6 +82,9 @@ function login() {
 }
 function backHome() {
   window.location.href = "http://127.0.0.1:5501/index.html";
+}
+function backShop() {
+  window.location.href = "http://127.0.0.1:5501/page/user/products/products.html";
 }
 
 // active cho 3 cham //

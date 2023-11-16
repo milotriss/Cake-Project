@@ -24,19 +24,27 @@
   </head>
   <body>
     <div class="cart__overlay">
-      <header id="mainheader"></header>
+      <div class="popup__cart-delete">
+        <h1>Are you <strong style="color: #fff;">SURE</strong> about that!!!</h1>
+        <div class="popup__cart-delete-btn">
+          <button onclick="deleteCart()">Yes</button>
+          <button onclick="offPopUpDelete()">No</button>
+        </div>
+      </div>
       <nav id="nav"></nav>
       <main>
         <section class="cart__top">
           <div class="cart__top-title">
-            <h1>&larr; Continue shopping</h1>
+            <h1 onclick="backShop()">&larr; Continue shopping</h1>
             <hr />
           </div>
-          <ul class="list-cart">
-          </ul>
-          <div class="cart__top-voucher">
-            <input placeholder="Voucher Code" type="text" />
-            <button>Apply Voucher</button>
+          <div class="cart__top-products">
+            <ul class="list-cart">
+            </ul>
+            <div class="cart__top-voucher">
+              <input placeholder="Voucher Code" type="text" />
+              <button>Apply Voucher</button>
+            </div>
           </div>
         </section>
         <section class="cart__bottom">

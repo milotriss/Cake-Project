@@ -1,13 +1,13 @@
 //renderDetailsProducts
-function renderDetailProducts(){
-    let db = JSON.parse(localStorage.getItem('products'))
-    let getUrl = window.location.href
-    let id = getUrl.split('=')[1]
-    let newDb = db.find((item)=>{
-        return item.id == id
-    })
-    let deTails = document.querySelector('.details')
-    deTails.innerHTML= `<div class="details__left">
+function renderDetailProducts() {
+  let db = JSON.parse(localStorage.getItem("products"));
+  let getUrl = window.location.href;
+  let id = getUrl.split("=")[1];
+  let newDb = db.find((item) => {
+    return item.id == id;
+  });
+  let deTails = document.querySelector(".details");
+  deTails.innerHTML = `<div class="details__left">
     <img src="../../../${newDb.img}" alt="" />
   </div>
   <div class="details__right">
@@ -39,22 +39,21 @@ function renderDetailProducts(){
       <i title="Instagram" class="ti-instagram"></i>
       <i title="Twitter" class="ti-twitter"></i>
     </div>
-  </div>`
+  </div>`;
 
-    // console.log(newDb);
-    // console.log(db);
-    let hintProducts = db.filter(item =>{
-      return item.category == newDb.category
-    })
-    // console.log(hintProducts);
-    let listHintProducts = document.querySelector('.products')
-    // console.log(listHintProducts);
+  // console.log(newDb);
+  // console.log(db);
+  let hintProducts = db.filter((item) => {
+    return item.category == newDb.category;
+  });
+  // console.log(hintProducts);
+  let listHintProducts = document.querySelector(".products");
+  // console.log(listHintProducts);
 
-    listHintProducts.innerHTML = ''
-    let hintProductsList = hintProducts.forEach(item => {
-      if (newDb.productName != item.productName) {
-        listHintProducts.innerHTML +=
-        `
+  listHintProducts.innerHTML = "";
+  let hintProductsList = hintProducts.forEach((item) => {
+    if (newDb.productName != item.productName) {
+      listHintProducts.innerHTML += `
         <figure class="hint-products">
         <img onclick="renderDetails(${item.id})" src="../../../${item.img}" alt="" />
         <figcaption>
@@ -63,35 +62,109 @@ function renderDetailProducts(){
           <span>${item.price}</span>
         </figcaption>
       </figure>
-        `
-      }
-    });
-
+        `;
+    }
+  });
 }
-renderDetailProducts()
+renderDetailProducts();
 
 // Add cart(details)
-function addCartDetails(id,index){
+function addCartDetails(id) {
   let dbUserClone = getAllItems("userClone");
   let dbUsers = getAllItems("users");
-
-  let inputResult = document.querySelectorAll(".quantity-products")[index].value;
-  if (inputResult == "") {
-    alert("hay nhap so luong san pham ban muon them vao gio hang");
-  }
-
   let dbProduct = getAllItems("products");
+
   let myProducts = dbProduct.find((item) => {
     return item.id == id;
   });
+  console.log(myProducts, "myProducts");
+
+  let inputResult = document.querySelector(".quantity-products").value;
+  console.log(inputResult);
+
+  if (inputResult == "") {
+    alert("hay nhap so luong san pham ban muon them vao gio hang");
+  }
 
   if (myProducts.stock < inputResult) {
     return alert("Sarn pham k du");
   }
 
-  let checkIndex = dbUsers.findIndex((item,index)=>{
-    return item.id == dbUserClone.id
-  })
+  // console.log(checkIndex);
+  // if (checkIndex != -1) {
+  //   let cart = dbUsers[checkIndex].carts;
+  //   console.log(cart, "cart");
 
+  //   let checkProducts = dbUsers[checkIndex].carts.findIndex(
+  //     (item) => (item.id = id)
+  //   );
+  //   console.log(checkProducts, "checkproducts");
+  //   if (checkProducts != -1) {
+  //     console.log("gio hang cos san pham");
 
+  //     let result = dbUsers[checkIndex].carts.map((item, index) => {
+  //       // console.log(item.id, "item.id");
+  //       // console.log(checkProducts, "checkproducts");
+  //       if (index == checkProducts) {
+  //         console.log("tang quantity");
+  //         return {
+  //           ...checkProducts,
+  //           quantity: +item.quantity + +inputResult,
+  //         };
+  //       }
+  //       else{
+  //         console.log("tham san pham moi");
+  //         dbUsers[checkIndex].carts.push({
+  //           ...myProducts,
+  //           quantity: Number(inputResult)
+  //         });
+  //         console.log(dbUsers[checkIndex].carts);
+
+  //       }
+  //     });
+  //     localStorage.setItem("users", JSON.stringify(dbUsers));
+  //     console.log(dbUsers);
+  //   } else {
+  //     console.log("gio hang trong");
+  //     dbUsers[checkIndex].carts.push({
+  //       ...myProducts,
+  //       quantity: Number(inputResult)
+  //     });
+  //     localStorage.setItem("users", JSON.stringify(dbUsers));
+  //     console.log(dbUsers);
+  //   }
+  // }
+  let myUser = dbUsers.find((item) => {
+    return item.id == dbUserClone.id;
+  });
+  let checkIndex = dbUsers.findIndex((item, index) => {
+    return item.id == dbUserClone.id;
+  });
+
+  // console.log(myUser, "mySUser");
+  let checkCart = myUser.carts.findIndex((item) => item.id == myProducts.id);
+  if (checkCart != -1) {
+    let result = dbUsers[checkIndex].carts.map((item, index) => {
+      if (index == checkCart) {
+        // console.log(item.quantity, inputResult);
+        // console.log(+item.quantity + +inputResult);
+        return {
+          ...item,
+          quantity: +item.quantity + +inputResult,
+        };
+      }
+      return item;
+    });
+    dbUsers[checkIndex].carts = result;
+    // console.log(dbUsers);
+    localStorage.setItem("users", JSON.stringify(dbUsers));
+  } else {
+    dbUsers[checkIndex].carts.push({
+      ...myProducts,
+      quantity: Number(inputResult),
+    });
+    console.log(dbUsers);
+    localStorage.setItem("users", JSON.stringify(dbUsers));
+  }
+  renderCount();
 }

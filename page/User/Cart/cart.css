@@ -19,9 +19,9 @@ body {
 .cart__overlay main {
     height: 100%;
     width: 100%;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-left: 10%;
-    padding-right: 200px;
+    padding-right: 100px;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ body {
 }
 .cart__top {
     width: 100%;
-    height: 70%;
+    height: 75%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,15 +51,25 @@ body {
     color: var(--primary);
     cursor: pointer;
 }
-.cart__top .cart__top-title hr {
-    margin-bottom: 10px;
-}
 .cart__top .cart__top-title p {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
 }
-.cart__top ul {
+.cart__top .cart__top-products {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.cart__top .cart__top-products .empty__cart {
+    width: 300px;
+    height: 400px;
+}
+.cart__top .cart__top-products ul {
     height: 80%;
     width: 100%;
     color: var(--primary);
@@ -70,10 +80,10 @@ body {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
-.cart__top ul::-webkit-scrollbar{
+.cart__top .cart__top-products ul::-webkit-scrollbar{
     display: none;
 }
-.cart__top ul li {
+.cart__top .cart__top-products ul li {
     min-height: 25%;
     width: 100%;
     display: flex;
@@ -84,33 +94,33 @@ body {
     border-radius: 30px;
     overflow: hidden;
 }
-.cart__top ul li img {
+.cart__top .cart__top-products ul li img {
     object-fit: cover;
     height: 100%;
     width: 25%;
 }
-.cart__top ul li p,
-.cart__top ul li .cart__quantity,
-.cart__top ul li .cart__quantity span,
-.cart__top ul li i {
+.cart__top .cart__top-products ul li p,
+.cart__top .cart__top-products ul li .cart__quantity,
+.cart__top .cart__top-products ul li .cart__quantity span,
+.cart__top .cart__top-products ul li i {
     width: 25%;
     text-align: center;
 }
-.cart__top ul li p {
+.cart__top .cart__top-products ul li p {
     font-family: 'Lobster Two', sans-serif;
     font-size: 30px;
 }
-.cart__top ul li .cart__quantity {
+.cart__top .cart__top-products ul li .cart__quantity {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 }
-.cart__top ul li .cart__quantity span{
-    font-size: 18px;
+.cart__top .cart__top-products ul li .cart__quantity span{
+    font-size: 30px;
     width: 25px;
 }
-.cart__top ul li .cart__quantity button {
+.cart__top .cart__top-products ul li .cart__quantity button {
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -119,41 +129,45 @@ body {
     border-radius: 10px;
     transition: 0.3s;
 }
-.cart__top ul li .cart__quantity button:hover {
+.cart__top .cart__top-products ul li .cart__quantity button:hover {
     background: linear-gradient(90deg, var(--primary), rgba(17, 194, 179, 0.192));
     color: #fff;
     transform: scale(1.09);
 }
-.cart__top ul li i {
+.cart__top .cart__top-products ul li i {
     font-size: 35px;
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s;
 }
-.cart__top ul li i:hover {
+.cart__top .cart__top-products ul li i:hover {
     color: #fff;
     transform: scale(1.3);
 }
+.cart__top .cart__top-products ul li  p:last-child {
+    color: var(--primary);
+    font-size: 30px;
+}
 
 
-.cart__top .cart__top-voucher {
+.cart__top .cart__top-products .cart__top-voucher {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
     height: 10%;
 }
-.cart__top .cart__top-voucher input {
+.cart__top .cart__top-products .cart__top-voucher input {
     padding: 10px 20px 10px 10px;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid var(--primary);
     color: var(--primary);
 }
-.cart__top .cart__top-voucher input::placeholder {
+.cart__top .cart__top-products .cart__top-voucher input::placeholder {
     color: #ffffffc7;
 }
-.cart__top .cart__top-voucher button {
+.cart__top .cart__top-products .cart__top-voucher button {
     padding: 10px 30px;
     color: var(--primary);
     background-color: transparent;
@@ -164,7 +178,7 @@ body {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     transition: 0.3s;
 }
-.cart__top .cart__top-voucher button:hover {
+.cart__top .cart__top-products .cart__top-voucher button:hover {
     background: linear-gradient(90deg, var(--primary), rgba(17, 194, 179, 0.192));
     color: #fff;
     transform: scale(1.05);
@@ -172,7 +186,7 @@ body {
 
 
 .cart__bottom {
-    height: 30%;
+    height: 25%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -222,4 +236,44 @@ body {
     background: linear-gradient(90deg, var(--primary), rgba(17, 194, 179, 0.192));
     color: #fff;
     transform: scale(1.05);
+}
+
+/* Popup */
+.popup__cart-delete {
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    width: 350px;
+    height: 200px;
+    padding: 10px 20px;
+    background-color: #000;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.5);
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    display: none;
+}
+.popup__cart-delete .popup__cart-delete-btn {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.popup__cart-delete .popup__cart-delete-btn button {
+    width: 60px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    background-color: var(--primary);
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+.popup__cart-delete .popup__cart-delete-btn button:hover {
+    background-color: transparent;
+    color: #fff;
 }
