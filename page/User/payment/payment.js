@@ -97,7 +97,7 @@ function onPayment(){
 
         // xoá cart trong users
         myUser.carts = []
-        let 
+        console.log(dbUsers);
 }
 
 //

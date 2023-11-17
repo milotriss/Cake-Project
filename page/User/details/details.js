@@ -8,7 +8,7 @@ function renderDetailProducts() {
   });
   let deTails = document.querySelector(".details");
   deTails.innerHTML = `<div class="details__left">
-    <img src="../../../${newDb.img}" alt="" />
+    <img src="../../${newDb.img}" alt="" />
   </div>
   <div class="details__right">
     <h1>${newDb.productName}</h1>
