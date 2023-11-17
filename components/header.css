@@ -16,6 +16,7 @@ header img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    cursor: pointer;
 }
 header .search input {
     padding: 10px 0px 10px 80px;
@@ -80,6 +81,7 @@ header .login {
     border: 1px solid var(--primary);
     border-radius: 20px;
     transition: 0.3s;
+    cursor: pointer;
 }
 #profile span:hover {
     transform: scale(1.09);

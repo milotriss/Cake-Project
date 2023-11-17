@@ -9,8 +9,8 @@ function renderProducts() {
         <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
         <figcaption>
           <h1>${item.productName}</h1>
-          <p>${item.price.toLocaleString() + " VND"}</p>
-          <span>Con lai: ${item.stock}</span>
+          <p style="font-family: 'Lobster Two', sans-serif;">${(item.price).toLocaleString() + " VND"}</p>
+          <span>Stock: ${item.stock}</span>
           <div class="details__add">
             <button onclick="onAddCart(${item.id},${index})">ADD+</button>
             <input value="1" min="1" max="${item.stock}" class="quantity-products" type="text" />
@@ -53,7 +53,7 @@ function renderCategory(data) {
         <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
         <figcaption>
           <h1>${item.productName}</h1>
-          <p>${item.price.toLocaleString() + " VND"}</p>
+          <p style="font-family: 'Lobster Two', sans-serif;">${(item.price).toLocaleString() + " VND"}</p>
           <span>Con lai: ${item.stock}</span>
           <div class="details__add">
             <button onclick="onAddCart(${item.id},${index})">ADD+</button>

@@ -55,9 +55,9 @@ renderMainSidebar();
 function renderMainHeader() {
   const header = document.getElementById("main-header");
   header.innerHTML = `
-  <img
+  <img onclick="backHome()"
   src="https://toppng.com/uploads/preview/image-library-library-cupcake-birthday-cake-torte-simple-bakery-cupcake-logo-11562961286zthqttjrf1.png"
-  alt=""
+  alt="logo"
   />
   <div id="profile">
     <button class="login-btn" onclick="loginHeader()" type="submit">Login</button>

@@ -121,13 +121,12 @@ function onMinus(id) {
 //
 function deleteCart() {
   let dbUsers = JSON.parse(localStorage.getItem("users"));
-  console.log(dbUsers);
+
   dbUsers.forEach((item) => {
     let newDbUsers = item.carts.filter((element) => element.id != idDelete);
 
-    console.log(item.carts, "item.carts");
-    console.log(newDbUsers, "newdb");
     item.carts = newDbUsers;
+    
     console.log(dbUsers);
     localStorage.setItem("users", JSON.stringify(dbUsers));
   });
@@ -135,10 +134,27 @@ function deleteCart() {
   renderCart();
 }
 
+//
 function onPopUpDelete(id) {
   document.querySelector(".popup__cart-delete").style.display = "flex";
   idDelete = id;
 }
+
+//
 function offPopUpDelete() {
   document.querySelector(".popup__cart-delete").style.display = "none";
+}
+
+//
+function toPayment(){
+  let dbUsers = JSON.parse(localStorage.getItem("users"));
+  let dbUserClone = JSON.parse(localStorage.getItem("userClone"));
+
+  let myUser = dbUsers.find((item) => item.id == dbUserClone.id);
+
+  if (myUser.carts.length == 0) {
+    alert('Your product is EMPTY!')
+  }else{
+    window.location.href = "http://127.0.0.1:5501/page/user/payment/payment.html"
+  }
 }

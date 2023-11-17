@@ -12,20 +12,20 @@ function renderDetailProducts() {
   </div>
   <div class="details__right">
     <h1>${newDb.productName}</h1>
-    <h6>${newDb.price}</h6>
+    <h6 style="font-family: 'Lobster Two', sans-serif;">${(newDb.price).toLocaleString() + " VND"}</h6>
     <p>
-      mo ta san pham: Lorem, ipsum dolor sit amet consectetur adipisicing
+      <strong style="text-transform: uppercase; ">Product Description:</strong> <br> Lorem, ipsum dolor sit amet consectetur adipisicing
       elit. Dolorum molestias, voluptas minus consequuntur dolorem
       placeat eum tenetur, amet at libero dolor. Rem cumque, eligendi
       ipsum dolores aliquam facere maxime ab!
     </p>
     <p>
-      thanh phan: Lorem ipsum dolor sit amet, consectetur adipisicing
+      <strong style="text-transform: uppercase;">Ingredient:</strong> <br> Lorem ipsum dolor sit amet, consectetur adipisicing
       elit. Qui ratione obcaecati, placeat architecto consequatur cumque
       saepe asperiores? Nulla facilis aliquid nisi ullam, ipsa
       asperiores. Soluta quasi necessitatibus quia accusantium. Omnis.
     </p>
-    <span>San pham con: ${newDb.stock}</span>
+    <span>Stock: ${newDb.stock}</span>
     <div class="details__right-add">
       <button onclick="addCartDetails(${newDb.id})">ADD+</button>
       <div class="details__right-quantity">
@@ -59,7 +59,7 @@ function renderDetailProducts() {
         <figcaption>
           <h1>${item.productName}</h1>
           <p>${item.desc}</p>
-          <span>${item.price}</span>
+          <span style="font-family: 'Lobster Two', sans-serif;">${(item.price).toLocaleString() + " VND"}</span>
         </figcaption>
       </figure>
         `;

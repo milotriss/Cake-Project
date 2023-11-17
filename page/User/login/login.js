@@ -10,19 +10,25 @@ function signUpAccount() {
     let confirmPw = document.getElementById("confirm-password-signup").value
 
   let dbUsers = getAllItems("users");
+  let checkPassWord = password.split('')
   let check = dbUsers.find((item) => {
     return item.email == emails;
   });
   if (check) {
-    alert("Tai khoan da ton tai");
+    alert("Acount already EXISTS!");
   } else {
-    if (name== 0 && emails == 0 && password == 0) {
-      alert('nhap day du thong tin')
+    if (name.length == 0 || emails.length == 0 || password.length == 0) {
+      alert('Enter complete information')
+      window.reload()
     }else{
       if (password != confirmPw) {
-        alert("Xac nhan mat khau nhap lai khong chinh xac");
-      } else {
-        alert("ban da dang ky thanh cong");
+        alert("Confirm password INCORECT!");
+        window.reload()
+      }if (checkPassWord.length < 4 || checkPassWord.length > 16) {
+        alert('Password must be from 4 to 16 characters, Tks!')
+        window.reload()
+      }else {
+        alert("SIGN UP SUCCESS");
         let newDbUsers = insertItem('users', {
           name: name,
           email: emails,
@@ -55,27 +61,10 @@ function signInAccount() {
     alert("Wellcome to 1990 Bakery");
     localStorage.setItem("userClone", JSON.stringify(check));
   } else {
-    alert("Email hoac Mat khau cua ban khong dung");
+    alert("Your Email or Password is INCORECT!");
+    window.reload()
   }
 }
-// function renderLogout(){
-//   let dbUserClone = JSON.parse(localStorage.getItem('userClone'))
-//   console.log(dbUserClone);
-//   let profile = document.getElementById('profile')
-//   let change = document.querySelector('.login-btn')
-//   if (dbUserClone) {
-//     change = "block";
-//     profile.innerHTML = 
-//     `
-//       <span>Hi, ${dbUserClone.name}</span>
-//       <p onclick="logout()" >Logout</p>
-//     `
-//   }else {
-//     profile.innerHTML = ""
-//     change = "none"
-//     // console.log(document.querySelector('.login-btn'));
-//   }
-// }
 
 function signUp() {
   event.preventDefault();

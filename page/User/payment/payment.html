@@ -25,31 +25,40 @@
       <section class="products__payment">
         <h1>Your Products</h1>
         <ul class="product__payment-items">
-          <li>
-            <img src="">
-            <p>Name Products</p>
-            <span>so luong</span>
-            <span>Tong gia</span>
-          </li>
         </ul>
       </section>
       <form class="payment__info">
-        <h1>Lam Nhat Tien</h1>
+        <h1 id="name-user"></h1>
         <div class="payment__info-items">
-          <input placeholder="Delivery address" type="text">
-          <input placeholder="Your Phone" type="text">
-          <span>date month year</span>
-          <span>trang thai</span>
+          <div>
+            <input id="address" placeholder="Delivery address" type="text">
+            <input id="phone" placeholder="Your Phone" type="text">
+          </div>
+          <p id="last-price"></p>
+          <div>
+            <span id="date"></span>
+            <span id="status-payment">Wait for confirmation</span>
+          </div>
         </div>
-        <button>COD Payment</button>
+        <button onclick="onPopUpPayment()">COD Payment</button>
       </form>
       <div class="popup__payment">
-        <h1>PAYMENT CONFIRMATION</h1>
+        <h1>YOU SURE PAYMENT CONFIRMATION</h1>
         <div class="popup__cart-delete-btn">
-          <button >Yes</button>
-          <button >No</button>
+          <button onclick="onPayment()">Yes</button>
+          <button onclick="offPopUpPayment()">No</button>
         </div>
       </div>
     </main>
+    <script src="../../../models/model-products.js"></script>
+    <script src="../../../models/orders-model.js"></script>
+    <script src="../../../models/users-model.js"></script>
+    <script src="../../../repositories/repositories.js"></script>
+    <script src="../../../index.js"></script>
+    <script src="../../../services/orders.service.js"></script>
+    <script src="./payment.js"></script>
+    <script>
+      renderPayment()
+    </script>
   </body>
 </html>
