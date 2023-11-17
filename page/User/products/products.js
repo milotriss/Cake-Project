@@ -1,10 +1,10 @@
 const productService = new ProductService();
 function renderProducts() {
-  let db = getAllItems("products");
+  let dbProduct = getAllItems("products");
 
   let listCake = document.getElementById("products__items");
   listCake.innerHTML = "";
-  db.forEach(function (item, index) {
+  dbProduct.forEach(function (item, index) {
     listCake.innerHTML += `<figure>
         <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
         <figcaption>
@@ -19,10 +19,7 @@ function renderProducts() {
       </figure>`;
   });
 }
-// renderProducts()
-// link page
-//
-//
+
 
 // giu active cho category
 let listCategory = document.querySelectorAll(".list-category");
@@ -48,7 +45,7 @@ function renderCategory(data) {
   const category = productService.getProductsByClickCategory(data);
   let listCake = document.getElementById("products__items");
   listCake.innerHTML = "";
-  category.forEach(function (item, index) {
+  category.forEach((item, index)=>{
     listCake.innerHTML += `<figure>
         <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
         <figcaption>
@@ -88,34 +85,23 @@ function onSearch() {
 function onAddCart(id, index) {
   let dbUserClone = getAllItems("userClone");
   let dbUsers = getAllItems("users");
-
-  let inputResult = document.querySelectorAll(".quantity-products")[index].value;
-  if (inputResult == "") {
-    alert("hay nhap so luong san pham ban muon them vao gio hang");
-  }
-
-  if (inputResult == 0) {
-    alert('Quantity INCORRECT!')
-  }
-
   let dbProduct = getAllItems("products");
-  let myProducts = dbProduct.find((item) => {
-    return item.id == id;
-  });
+  let inputResult = document.querySelectorAll(".quantity-products")[index].value;
+
+  if (inputResult == 0 || inputResult == "") {
+    return alert('Quantity INCORRECT!')
+  }
+
+  let myProducts = dbProduct.find((item) => item.id == id);
 
   if (myProducts.stock < inputResult) {
-    return alert("Sarn pham k du");
+    return alert(`We only have ${myProducts.stock} left for this product, so SORRY!`);
   }
 
-  let checkIndex = dbUsers.findIndex((item, index) => {
-    return item.id == dbUserClone.id;
-  });
+  let checkIndex = dbUsers.findIndex((item, index) => item.id == dbUserClone.id);
   if (checkIndex != -1) {
-    
     const cart = dbUsers[checkIndex].carts;
-
-    let checkProducts = cart.findIndex((item) => item.id == id);
-
+    let checkProducts = cart.findIndex(item => item.id == id);
     if (checkProducts != -1) {
       let result = dbUsers[checkIndex].carts.map((item, index) => {
         if (index == checkProducts) {
@@ -133,12 +119,10 @@ function onAddCart(id, index) {
         ...myProducts,
         quantity: Number(inputResult),
       });
-      console.log(dbUsers);
-
       localStorage.setItem("users", JSON.stringify(dbUsers));
     }
   } else {
-    alert("ban hay dang nhap");
+    return alert("Please LOGIN first!");
   }
   renderCount()
 }

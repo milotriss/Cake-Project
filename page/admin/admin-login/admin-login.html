@@ -18,10 +18,15 @@
     <div class="admin__login-overlay">
         <form>
             <h1>Admin Login</h1>
-            <input placeholder="Email" type="text">
-            <input placeholder="Password" type="text">
-            <button>Login</button>
+            <input id="email-admin" placeholder="Email" type="text">
+            <input id="password-admin" placeholder="Password" type="password">
+            <button onclick="loginAdmin()">Login</button>
         </form>
     </div>
+    <script src="../../../models/model-products.js"></script>
+    <script src="../../../models/orders-model.js"></script>
+    <script src="../../../models/users-model.js"></script>
+    <script src="./admin-login.js"></script>
+    <script src="../admin/admin.js"></script>
 </body>
 </html>

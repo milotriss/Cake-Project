@@ -1,9 +1,11 @@
 function renderHistory(){
     let dbOrders = JSON.parse(localStorage.getItem('orders'));
+    let dbUserClone = JSON.parse(localStorage.getItem('userClone'));
 
+    let myOrder = dbOrders.filter(item => item.idUser == dbUserClone.id)
     let historyList = document.querySelector('.history__list');
     historyList.innerHTML = ""
-    dbOrders.forEach((item,index) => {
+    myOrder.forEach((item,index)=>{
         switch (item.status) {
             case 2: 
             item.status = 'Working...'
@@ -21,14 +23,14 @@ function renderHistory(){
         historyList.innerHTML +=  
         `
         <li>
-            <span>${[index]+1}</span>
+            <span>${+[index] + +1}</span>
             <span>${item.date}</span>
             <button onclick="popUpHistory(${item.id})">History products</button>
             <span>${item.status}</span>
             <p>${(item.totalPrice).toLocaleString() + " VND"}</p>
         </li>
         `
-    });
+    })
 }
 
 //
@@ -36,13 +38,14 @@ function popUpHistory(id){
     document.querySelector('.popup__list').style.display = "flex"
     document.querySelector('.history').style.display = "none"
     
-    let dbOrders = JSON.parse(localStorage.getItem('orders'));
     let popUpHistoryList = document.querySelector('.popup__history');
-    console.log(dbOrders);
     popUpHistoryList.innerHTML=""
-    let newDbOrder = dbOrders.find(item => item.id == id)
-    console.log(newDbOrder);
-    newDbOrder.cartOrder.forEach(item =>{
+    let dbOrders = JSON.parse(localStorage.getItem('orders'));
+    let dbUserClone = JSON.parse(localStorage.getItem('userClone'));
+
+    let myOrder = dbOrders.filter(item => item.idUser == dbUserClone.id)
+    let myOrderDetails = myOrder.find(item=> item.id == id)
+    myOrderDetails.cartOrder.forEach(item =>{
         popUpHistoryList.innerHTML += 
         `
         <li>
@@ -52,10 +55,9 @@ function popUpHistory(id){
             <p>${(item.quantity * item.price).toLocaleString() + " VND"}</p>
         </li>
         `
-    })
-    dbOrders.forEach((item,index) => {
-    document.querySelector('.order__total').innerHTML = (item.totalPrice).toLocaleString() + " VND"
-    })
+    })  
+    document.querySelector('.order__total').innerHTML = (myOrderDetails.totalPrice).toLocaleString() + " VND"
+
 }
 
 // 

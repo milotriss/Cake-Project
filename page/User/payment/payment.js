@@ -67,7 +67,6 @@ function onPayment(){
             localStorage.setItem('orders', JSON.stringify(dbOrders))
         } 
         else {
-            dbOrders.forEach(item=>{
                 let object = {
                     cartOrder : myUser.carts,
                     id : dbOrders[dbOrders.length-1].id + 1,
@@ -81,8 +80,8 @@ function onPayment(){
                 }
                 dbOrders.push(object)
                 localStorage.setItem('orders',JSON.stringify(dbOrders))
-            })
-        }
+            }
+        
 
 
         // Trừ stock trong users

@@ -24,12 +24,6 @@
       <section id="admin__sidebar" class="sidebar">
         <section class="admin">
           <figure class="admin__info">
-            <img src="../../../assets/images/cake/admin.jpeg" alt="" />
-            <figcaption>
-              <h1>Lam Nhat Tien</h1>
-              <p>Position: ...</p>
-              <button>Log out</button>
-            </figcaption>
           </figure>
         </section>
         <section class="sidebar__info">
@@ -73,17 +67,17 @@
         <div class="revenue">
           <h1>Revenue</h1>
           <i class="fa-solid fa-money-bill-wheat"></i>
-          <p>$999+</p>
+          <p style="font-family: 'Lobster Two', sans-serif;" class="revenue-number"></p>
         </div>
         <div class="products-db">
           <h1>Products</h1>
           <i class="fa-solid fa-clipboard-list"></i>
-          <p>9999+</p>
+          <p style="font-family: 'Lobster Two', sans-serif;" class="products-total"></p>
         </div>
         <div class="users-db">
           <h1>Users</h1>
           <i class="fa-solid fa-user"></i>
-          <p>99+</p>
+          <p style="font-family: 'Lobster Two', sans-serif;" class="users-total"></p>
         </div>
         <div class="status__users">
           <h1>Statistics Of Users</h1>
@@ -105,52 +99,39 @@
               </div>
             </div>
             <table>
-              <tr>
-                <th>#</th>
-                <th>ID</th>
-                <th>Email</th>
-                <th>Full Name</th>
-                <th>Address</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>first_user@gmail.com</td>
-                <td>Lam Nhat A</td>
-                <td>Da Nang</td>
-                <td>Active</td>
-                <td>
-                  <button type="submit">unblock</button>
-                  <button type="submit">block</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>first_user@gmail.com</td>
-                <td>Lam Nhat A</td>
-                <td>Da Nang</td>
-                <td>Active</td>
-                <td>
-                  <button type="submit">unblock</button>
-                  <button type="submit">block</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>first_user@gmail.com</td>
-                <td>Lam Nhat A</td>
-                <td>Da Nang</td>
-                <td>Active</td>
-                <td>
-                  <button type="submit">unblock</button>
-                  <button type="submit">block</button>
-                </td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>ID</th>
+                  <th>Email</th>
+                  <th>Full Name</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="list-users">
+                <tr>
+                  <td>1</td>
+                  <td>01</td>
+                  <td>first_user@gmail.com</td>
+                  <td>Lam Nhat A</td>
+                  <td>Active</td>
+                  <td>
+                    <button type="submit">unblock</button>
+                    <button type="submit">block</button>
+                  </td>
+                </tr>
+              </tbody>
             </table>
+            <div class="pagination">
+              <i class="ti-angle-double-left"></i>
+              <i class="ti-angle-left"></i>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <i class="ti-angle-right"></i>
+              <i class="ti-angle-double-right"></i>
+            </div>
           </section>
           <section class="admin__list">
             <div class="admin__title">
@@ -162,47 +143,29 @@
               <button>Add Admin +</button>
             </div>
             <table>
-              <tr>
-                <th>#</th>
-                <th>ID</th>
-                <th>Email</th>
-                <th>Full Name</th>
-                <th>Role</th>
-                <th>Action</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>first_user@gmail.com</td>
-                <td>Lam Nhat A</td>
-                <td>Active</td>
-                <td>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>first_user@gmail.com</td>
-                <td>Lam Nhat A</td>
-                <td>Active</td>
-                <td>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>first_user@gmail.com</td>
-                <td>Lam Nhat A</td>
-                <td>Active</td>
-                <td>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>ID</th>
+                  <th>Email</th>
+                  <th>Full Name</th>
+                  <th>Role</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="list-admin">
+                <tr>
+                  <td>1</td>
+                  <td>01</td>
+                  <td>first_user@gmail.com</td>
+                  <td>Lam Nhat A</td>
+                  <td>Active</td>
+                  <td>
+                    <button type="submit">edit</button>
+                    <button type="submit">delete</button>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </section>
         </div>
@@ -229,165 +192,18 @@
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>Producst 1</td>
-                <td>49000</td>
-                <td>19</td>
-                <td>99+</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
+            <tbody id="list-products">
             </tbody>
           </table>
+          <div class="pagination">
+            <i class="ti-angle-double-left"></i>
+            <i class="ti-angle-left"></i>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <i class="ti-angle-right"></i>
+            <i class="ti-angle-double-right"></i>
+          </div>
         </section>
       </main>
       <main class="orders main-none">
@@ -412,165 +228,18 @@
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>01</td>
-                <td>09/01/2024</td>
-                <td>ID-User</td>
-                <td>999.999+</td>
-                <td>Order placed</td>
-                <td>
-                  <button type="submit">view</button>
-                  <button type="submit">edit</button>
-                  <button type="submit">delete</button>
-                </td>
-              </tr>
+            <tbody id="list-orders">
             </tbody>
           </table>
+          <div class="pagination">
+            <i class="ti-angle-double-left"></i>
+            <i class="ti-angle-left"></i>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <i class="ti-angle-right"></i>
+            <i class="ti-angle-double-right"></i>
+          </div>
         </section>
       </main>
       <main class="main-none"></main>
@@ -583,5 +252,13 @@
     <script src="../../../models/users-model.js"></script>
     <script src="../admin-login/admin-login.js"></script>
     <script src="./admin.js"></script>
+    <script>
+      renderInfoAdmin()
+      renderDashboard()
+      renderListOfUser()
+      renderListOfAdmin()
+      renderProductsAdmin()
+      renderOrderAdmin()
+    </script>
   </body>
 </html>

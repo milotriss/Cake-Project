@@ -78,23 +78,19 @@ function addCartDetails(id) {
   let inputResult = document.querySelector(".quantity-products").value;
 
   if (dbUserClone.length == 0) {
-    alert('ban hay dang nhap')
+    return alert('Please LOGIN first!')
   }
 
   let myProducts = dbProduct.find((item) => {
     return item.id == id;
   });
 
-  if (inputResult == 0) {
+  if (inputResult == 0 || inputResult == "") {
     alert('Quantity INCORRECT!')
   }
 
-  if (inputResult == "") {
-    alert("hay nhap so luong san pham ban muon them vao gio hang");
-  }
-
   if (myProducts.stock < inputResult) {
-    return alert("Sarn pham k du");
+    return alert(`We only have ${myProducts.stock} left for this product, so SORRY!`);
   }
 
   let myUser = dbUsers.find((item) => {

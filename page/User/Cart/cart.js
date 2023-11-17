@@ -2,24 +2,19 @@ let idDelete;
 function renderCart() {
   let dbUsers = JSON.parse(localStorage.getItem("users"));
   let dbUsersClone = JSON.parse(localStorage.getItem("userClone"));
-  // console.log(dbUsers);
   let listCart = document.querySelector(".list-cart");
   let noneCart = document.querySelector(".cart__top-products")
   let totalUi = document.querySelector(".total-price");
   let total = 0;
 
-  let newDbUser = dbUsers.find((item) => {
-    return item.id == dbUsersClone.id;
-  });
-  
-  // console.log(newDbUser);
+  let newDbUser = dbUsers.find(item => item.id == dbUsersClone.id);
   listCart.innerHTML = "";
   if (newDbUser.carts.length == 0) {
     noneCart.innerHTML = `<img class="empty__cart" src="../../../assets/images/cake/Daco_5212497.png">`
     totalUi.innerHTML = total
   }
   else{
-    newDbUser.carts.forEach((element) => {
+    newDbUser.carts.forEach(element => {
       listCart.innerHTML += `
       <li>
           <img src="../../../${element.img}" alt="">
@@ -39,20 +34,6 @@ function renderCart() {
   }
 }
 renderCart();
-
-function minus() {
-  let dbUsers = JSON.parse(localStorage.getItem("users"));
-  let dbUserClone = JSON.parse(localStorage.getItem("userClone"));
-  let dbProduct = JSON.parse(localStorage.getItem("products"));
-
-  let myUser = dbUsers.find((item) => {
-    return item.id == dbUserClone.id;
-  });
-
-  let myProducts = dbProduct.find((item) => {
-    return item.id == id;
-  });
-}
 
 // 
 function onPlus(id) {
@@ -77,9 +58,7 @@ function onPlus(id) {
         return item;
       }
     });
-    console.log(result);
       dbUsers[checkIndexUser].carts = result;
-      console.log(dbUsers);
       localStorage.setItem("users", JSON.stringify(dbUsers));
       renderCart()
   }else{
@@ -110,9 +89,7 @@ function onMinus(id) {
         return item;
       }
     });
-    console.log(result);
       dbUsers[checkIndexUser].carts = result;
-      console.log(dbUsers);
       localStorage.setItem("users", JSON.stringify(dbUsers));
       renderCart()
   }
@@ -121,15 +98,12 @@ function onMinus(id) {
 //
 function deleteCart() {
   let dbUsers = JSON.parse(localStorage.getItem("users"));
+  let dbUserClone = JSON.parse(localStorage.getItem("userClone"));
 
-  dbUsers.forEach((item) => {
-    let newDbUsers = item.carts.filter((element) => element.id != idDelete);
-
-    item.carts = newDbUsers;
-    
-    console.log(dbUsers);
+  let myUser = dbUsers.find(item => item.id == dbUserClone.id)
+  let result = myUser.carts.filter((element) => element.id != idDelete);
+    myUser.carts = result
     localStorage.setItem("users", JSON.stringify(dbUsers));
-  });
   document.querySelector(".popup__cart-delete").style.display = "none";
   renderCart();
 }

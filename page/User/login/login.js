@@ -15,21 +15,21 @@ function signUpAccount() {
     return item.email == emails;
   });
   if (check) {
-    alert("Acount already EXISTS!");
+    alert("Account already EXISTS!");
   } else {
     if (name.length == 0 || emails.length == 0 || password.length == 0) {
       alert('Enter complete information')
       window.reload()
     }else{
       if (password != confirmPw) {
-        alert("Confirm password INCORECT!");
+        alert("Confirm password INCORRECT!");
         window.reload()
       }if (checkPassWord.length < 4 || checkPassWord.length > 16) {
         alert('Password must be from 4 to 16 characters, Tks!')
         window.reload()
       }else {
         alert("SIGN UP SUCCESS");
-        let newDbUsers = insertItem('users', {
+          insertItem('users', {
           name: name,
           email: emails,
           password: password,
@@ -52,16 +52,14 @@ function signInAccount() {
   let dbUsers = getAllItems("users");
   let emails = document.getElementById("email-signin");
   let passwords = document.getElementById("password-signin");
-  let check = dbUsers.find((item) => {
-    return item.email == emails.value && item.password == passwords.value;
-  });
-  console.log(check);
+  let check = dbUsers.find((item) => item.email == emails.value && item.password == passwords.value && item.role == 2);
+
   if (check) {
     window.location.href = "http://127.0.0.1:5501/index.html";
-    alert("Wellcome to 1990 Bakery");
+    alert(`Welcome ${check.name} to 1990 Bakery`);
     localStorage.setItem("userClone", JSON.stringify(check));
   } else {
-    alert("Your Email or Password is INCORECT!");
+    alert("Your Email or Password is INCORRECT!");
     window.reload()
   }
 }
