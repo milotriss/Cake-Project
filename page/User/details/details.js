@@ -3,12 +3,14 @@ function renderDetailProducts() {
   let db = JSON.parse(localStorage.getItem("products"));
   let getUrl = window.location.href;
   let id = getUrl.split("=")[1];
+  console.log(id);
   let newDb = db.find((item) => {
     return item.id == id;
   });
+  console.log(newDb);
   let deTails = document.querySelector(".details");
   deTails.innerHTML = `<div class="details__left">
-    <img src="../../${newDb.img}" alt="" />
+    <img src="../../../${newDb.img}" alt="" />
   </div>
   <div class="details__right">
     <h1>${newDb.productName}</h1>
@@ -73,6 +75,7 @@ function addCartDetails(id) {
   let dbUserClone = getAllItems("userClone");
   let dbUsers = getAllItems("users");
   let dbProduct = getAllItems("products");
+  let inputResult = document.querySelector(".quantity-products").value;
 
   if (dbUserClone.length == 0) {
     alert('ban hay dang nhap')
@@ -81,10 +84,10 @@ function addCartDetails(id) {
   let myProducts = dbProduct.find((item) => {
     return item.id == id;
   });
-  // console.log(myProducts, "myProducts");
 
-  let inputResult = document.querySelector(".quantity-products").value;
-  // console.log(inputResult);
+  if (inputResult == 0) {
+    alert('Quantity INCORRECT!')
+  }
 
   if (inputResult == "") {
     alert("hay nhap so luong san pham ban muon them vao gio hang");
@@ -94,63 +97,17 @@ function addCartDetails(id) {
     return alert("Sarn pham k du");
   }
 
-  // console.log(checkIndex);
-  // if (checkIndex != -1) {
-  //   let cart = dbUsers[checkIndex].carts;
-  //   console.log(cart, "cart");
-
-  //   let checkProducts = dbUsers[checkIndex].carts.findIndex(
-  //     (item) => (item.id = id)
-  //   );
-  //   console.log(checkProducts, "checkproducts");
-  //   if (checkProducts != -1) {
-  //     console.log("gio hang cos san pham");
-
-  //     let result = dbUsers[checkIndex].carts.map((item, index) => {
-  //       // console.log(item.id, "item.id");
-  //       // console.log(checkProducts, "checkproducts");
-  //       if (index == checkProducts) {
-  //         console.log("tang quantity");
-  //         return {
-  //           ...checkProducts,
-  //           quantity: +item.quantity + +inputResult,
-  //         };
-  //       }
-  //       else{
-  //         console.log("tham san pham moi");
-  //         dbUsers[checkIndex].carts.push({
-  //           ...myProducts,
-  //           quantity: Number(inputResult)
-  //         });
-  //         console.log(dbUsers[checkIndex].carts);
-
-  //       }
-  //     });
-  //     localStorage.setItem("users", JSON.stringify(dbUsers));
-  //     console.log(dbUsers);
-  //   } else {
-  //     console.log("gio hang trong");
-  //     dbUsers[checkIndex].carts.push({
-  //       ...myProducts,
-  //       quantity: Number(inputResult)
-  //     });
-  //     localStorage.setItem("users", JSON.stringify(dbUsers));
-  //     console.log(dbUsers);
-  //   }
-  // }
   let myUser = dbUsers.find((item) => {
     return item.id == dbUserClone.id;
   });
   let checkIndex = dbUsers.findIndex((item, index) => {
     return item.id == dbUserClone.id;
   });
-    // console.log(myUser, "mySUser");
+
     let checkCart = myUser.carts.findIndex((item) => item.id == myProducts.id);
     if (checkCart != -1) {
       let result = dbUsers[checkIndex].carts.map((item, index) => {
         if (index == checkCart) {
-          // console.log(item.quantity, inputResult);
-          // console.log(+item.quantity + +inputResult);
           return {
             ...item,
             quantity: +item.quantity + +inputResult,
@@ -159,7 +116,6 @@ function addCartDetails(id) {
         return item;
       });
       dbUsers[checkIndex].carts = result;
-      // console.log(dbUsers);
       localStorage.setItem("users", JSON.stringify(dbUsers));
     } else {
       dbUsers[checkIndex].carts.push({
@@ -169,7 +125,5 @@ function addCartDetails(id) {
       console.log(dbUsers);
       localStorage.setItem("users", JSON.stringify(dbUsers));
     }
-
-
   renderCount();
 }

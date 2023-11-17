@@ -53,7 +53,7 @@ function onPayment(){
     // Lấy thông tin cho orders
         if (dbOrders.length == 0) {
             let object = {
-                cartOder : myUser.carts,
+                cartOrder : myUser.carts,
                 id : 1,
                 idUser : myUser.id,
                 totalPrice: total,
@@ -69,7 +69,7 @@ function onPayment(){
         else {
             dbOrders.forEach(item=>{
                 let object = {
-                    cartOder : myUser.carts,
+                    cartOrder : myUser.carts,
                     id : dbOrders[dbOrders.length-1].id + 1,
                     idUser : myUser.id,
                     totalPrice: total,
@@ -96,8 +96,15 @@ function onPayment(){
         localStorage.setItem('products',JSON.stringify(dbProduct))
 
         // xoá cart trong users
-        myUser.carts = []
-        console.log(dbUsers);
+        dbUsers.forEach(item=>{
+            if (item.id == myUser.id) {
+                myUser.carts=[]
+            }
+        })
+        localStorage.setItem('users',JSON.stringify(dbUsers))
+
+        alert('Order has been CONFIRMED. We will send order information to your email')
+        backHome()
 }
 
 //

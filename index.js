@@ -88,6 +88,17 @@ function backShop() {
   event.preventDefault()
   window.location.href = "http://127.0.0.1:5501/page/user/products/products.html";
 }
+function toHistory(){
+  event.preventDefault()
+  window.location.href = "http://127.0.0.1:5501/page/user/history/history.html";
+}
+function backCart(){
+  event.preventDefault()
+  window.location.href = "http://127.0.0.1:5501/page/user/cart/cart.html";
+}
+function backHistory(){
+  window.location.href = "http://127.0.0.1:5501/page/user/history/history.html"
+}
 
 // active cho 3 cham //
 const dots = document.querySelectorAll(".home__dot");
@@ -114,7 +125,7 @@ function renderLogout(){
   if (dbUserClone.length != 0) {
     profile.innerHTML = 
     `
-      <span>Hi, ${dbUserClone.name}</span>
+      <span onclick="toHistory()" >Hi, ${dbUserClone.name}</span>
       <p onclick="logout()">Logout</p>
       <i id="icon-cart" onclick="goToCart()" class="fa-solid fa-cart-plus">
       </i>

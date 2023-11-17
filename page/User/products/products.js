@@ -63,7 +63,6 @@ function renderCategory(data) {
       </figure>`;
   });
 }
-// renderCategory()
 
 //Search
 function onSearch() {
@@ -95,6 +94,10 @@ function onAddCart(id, index) {
     alert("hay nhap so luong san pham ban muon them vao gio hang");
   }
 
+  if (inputResult == 0) {
+    alert('Quantity INCORRECT!')
+  }
+
   let dbProduct = getAllItems("products");
   let myProducts = dbProduct.find((item) => {
     return item.id == id;
@@ -116,8 +119,6 @@ function onAddCart(id, index) {
     if (checkProducts != -1) {
       let result = dbUsers[checkIndex].carts.map((item, index) => {
         if (index == checkProducts) {
-          // console.log(item.quantity, inputResult);
-          // console.log(+item.quantity + +inputResult);
           return {
             ...item,
             quantity: +item.quantity + +inputResult,
@@ -126,7 +127,6 @@ function onAddCart(id, index) {
         return item;
       });
       dbUsers[checkIndex].carts = result
-      // console.log(dbUsers);
       localStorage.setItem("users", JSON.stringify(dbUsers));
     } else {
       dbUsers[checkIndex].carts.push({

@@ -23,7 +23,10 @@
   <body>
     <main>
       <section class="products__payment">
-        <h1>Your Products</h1>
+        <div class="products__payment-title">
+          <i onclick="backCart()" class="ti-back-left"></i>
+          <h1>Your Products</h1>
+        </div>
         <ul class="product__payment-items">
         </ul>
       </section>
@@ -56,6 +59,7 @@
     <script src="../../../repositories/repositories.js"></script>
     <script src="../../../index.js"></script>
     <script src="../../../services/orders.service.js"></script>
+    <script src="../history/history.js"></script>
     <script src="./payment.js"></script>
     <script>
       renderPayment()

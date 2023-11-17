@@ -34,7 +34,19 @@ main {
     flex-direction: column;
     gap: 20px;
 }
-.products__payment h1 {
+.products__payment .products__payment-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.products__payment .products__payment-title i {
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    color: var(--primary);
+}
+.products__payment .products__payment-title h1 {
     font-family: 'Quicksand', sans-serif;
     font-size: 50px;
     font-weight: 600;
