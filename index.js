@@ -140,10 +140,12 @@ renderLogout()
 
 function logout(){
   let dbUserClone = JSON.parse(localStorage.getItem('userClone'))
-  dbUserClone=[]
-  localStorage.setItem('userClone',JSON.stringify(dbUserClone))
-  window.location.href = "http://127.0.0.1:5501/index.html"
-  renderLogout()
+  if (confirm("Are you SURE about that!!!") == true){
+    dbUserClone=[]
+    localStorage.setItem('userClone',JSON.stringify(dbUserClone))
+    window.location.href = "http://127.0.0.1:5501/index.html"
+    renderLogout()
+  }
 }
 
 function renderCount(){

@@ -1,16 +1,15 @@
 // const userService = new UserService();
 
-
 //Dang ky
 function signUpAccount() {
   event.preventDefault();
-    let name = document.getElementById("name-signup").value
-    let emails = document.getElementById("email-signup").value
-    let password = document.getElementById("password-signup").value
-    let confirmPw = document.getElementById("confirm-password-signup").value
+  let name = document.getElementById("name-signup").value;
+  let emails = document.getElementById("email-signup").value;
+  let password = document.getElementById("password-signup").value;
+  let confirmPw = document.getElementById("confirm-password-signup").value;
 
   let dbUsers = getAllItems("users");
-  let checkPassWord = password.split('')
+  let checkPassWord = password.split("");
   let check = dbUsers.find((item) => {
     return item.email == emails;
   });
@@ -18,33 +17,32 @@ function signUpAccount() {
     alert("Account already EXISTS!");
   } else {
     if (name.length == 0 || emails.length == 0 || password.length == 0) {
-      alert('Enter complete information')
-      window.reload()
-    }else{
+      alert("Enter complete information");
+      window.reload();
+    } else {
       if (password != confirmPw) {
         alert("Confirm password INCORRECT!");
-        window.reload()
-      }if (checkPassWord.length < 4 || checkPassWord.length > 16) {
-        alert('Password must be from 4 to 16 characters, Tks!')
-        window.reload()
-      }else {
+        window.reload();
+      }
+      if (checkPassWord.length < 4 || checkPassWord.length > 16) {
+        alert("Password must be from 4 to 16 characters, Tks!");
+        window.reload();
+      } else {
         alert("SIGN UP SUCCESS");
-          insertItem('users', {
+        insertItem("users", {
           name: name,
           email: emails,
           password: password,
           role: 2,
           status: 1,
           carts: [],
-        })
+        });
       }
     }
-    
   }
   document.querySelector(".signup").style.display = "none";
   document.querySelector(".signin").style.display = "flex";
 }
-
 
 // Dang Nhap
 function signInAccount() {
@@ -52,15 +50,24 @@ function signInAccount() {
   let dbUsers = getAllItems("users");
   let emails = document.getElementById("email-signin");
   let passwords = document.getElementById("password-signin");
-  let check = dbUsers.find((item) => item.email == emails.value && item.password == passwords.value && item.role == 2);
 
+  let check = dbUsers.find(
+    (item) =>
+      item.email == emails.value &&
+      item.password == passwords.value &&
+      item.role == 2
+  );
   if (check) {
-    window.location.href = "http://127.0.0.1:5501/index.html";
-    alert(`Welcome ${check.name} to 1990 Bakery`);
-    localStorage.setItem("userClone", JSON.stringify(check));
-  } else {
+    if (check.status == 2) {
+      alert("Your account has been BLOCKED!");
+    }else{
+      window.location.href = "http://127.0.0.1:5501/index.html";
+      alert(`Welcome ${check.name} to 1990 Bakery`);
+      localStorage.setItem("userClone", JSON.stringify(check));
+    } 
+  }else{
     alert("Your Email or Password is INCORRECT!");
-    window.reload()
+    window.reload();
   }
 }
 

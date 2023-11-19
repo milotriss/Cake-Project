@@ -316,45 +316,20 @@ body {
     color: var(--primary);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.main__overlay .users__list .users__list-items .users__list-search {
-    flex: 1;
+.main__overlay .users__list .users__list-items .users__sort {
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-}
-.main__overlay .users__list .users__list-items .users__list-search input {
-    flex: 1;
-    padding: 10px 100px 10px 20px;
-    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.1);
     outline: none;
-    background-color: transparent;
-    border: 0.5px solid var(--primary);
-    border-radius: 5px;
+    border: 1px solid var(--primary);
     color: var(--primary);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.main__overlay .users__list .users__list-items .users__list-search input::placeholder {
-    color: #b2b0b0;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.main__overlay .users__list .users__list-items .users__list-search i {
-    display: inline-block;
-    position: absolute;
-    right: 3px;
-    top: 5px;
-    bottom: 3px;
-    font-size: 20px;
-    color: #000;
-    padding: 7px 10px 5px 30px;
-    background-color: var(--primary);
-    border-radius: 5px;
-    cursor: pointer;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-}
-.main__overlay .users__list .users__list-items .users__list-search i:hover {
-    transform: scale(1.05);
+    border-radius: 10px;
+    text-align: center;
 }
 .main__overlay .users__list table {
     height: 80%;
@@ -431,46 +406,8 @@ body {
     color: var(--primary);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.main__overlay .admin__list .admin__title .admin__list-search {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-.main__overlay .admin__list .admin__title .admin__list-search input {
-    flex: 1;
-    padding: 10px 100px 10px 20px;
-    font-size: 18px;
-    outline: none;
-    background-color: transparent;
-    border: 0.5px solid var(--primary);
-    border-radius: 5px;
-    color: var(--primary);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.main__overlay .admin__list .admin__title .admin__list-search input::placeholder {
-    color: #b2b0b0;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.main__overlay .admin__list .admin__title .admin__list-search i {
-    display: inline-block;
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    bottom: 3px;
-    font-size: 20px;
-    color: #000;
-    padding: 9px 10px 5px 30px;
-    background-color: var(--primary);
-    border-radius: 5px;
-    cursor: pointer;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-}
-.main__overlay .admin__list .admin__title .admin__list-search i:hover {
-    transform: scale(1.05);
-}
+
+
 .main__overlay .admin__list .admin__title button {
     font-size: 20px;
     padding: 8px 15px;
@@ -579,45 +516,16 @@ body {
     color: var(--primary);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.products .products__list .products__title .products__list-search {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-.products .products__list .products__title .products__list-search input {
-    flex: 1;
-    padding: 10px 100px 10px 20px;
-    font-size: 18px;
-    outline: none;
-    background-color: transparent;
-    border: 0.5px solid var(--primary);
-    border-radius: 5px;
-    color: var(--primary);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.products .products__list .products__title .products__list-search input::placeholder {
-    color: #b2b0b0;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.products .products__list .products__title .products__list-search i {
-    display: inline-block;
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    bottom: 3px;
+.products .products__list .products__title .products__sort {
+    width: 150px;
+    padding: 5px 10px;
     font-size: 20px;
-    color: #000;
-    padding: 5px 10px 5px 30px;
-    background-color: var(--primary);
-    border-radius: 5px;
-    cursor: pointer;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-}
-.products .products__list .products__title .products__list-search i:hover {
-    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 10px;
+    text-align: center;
 }
 .products .products__list .products__title button {
     font-size: 20px;
@@ -670,6 +578,11 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     font-weight: 300;
+}
+.products .products__list table tbody tr td img {
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
 }
 .products .products__list table tbody tr td button {
     padding: 5px 15px;
@@ -737,46 +650,18 @@ body {
     color: var(--primary);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.orders .orders__list .orders__title .orders__list-search {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-.orders .orders__list .orders__title .orders__list-search input {
-    flex: 1;
-    padding: 10px 100px 10px 20px;
-    font-size: 18px;
-    outline: none;
-    background-color: transparent;
-    border: 0.5px solid var(--primary);
-    border-radius: 5px;
-    color: var(--primary);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.orders .orders__list .orders__title .orders__list-search input::placeholder {
-    color: #b2b0b0;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.orders .orders__list .orders__title .orders__list-search i {
-    display: inline-block;
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    bottom: 3px;
+.orders .orders__list .orders__title .orders__sort {
+    width: 150px;
+    padding: 5px 10px;
     font-size: 20px;
-    color: #000;
-    padding: 5px 10px 5px 30px;
-    background-color: var(--primary);
-    border-radius: 5px;
-    cursor: pointer;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 10px;
+    text-align: center;
 }
-.orders .orders__list .orders__title .orders__list-search i:hover {
-    transform: scale(1.05);
-}
+
 .orders .orders__list .orders__title button {
     font-size: 20px;
     padding: 8px 15px;
@@ -891,4 +776,273 @@ body {
 .pagination span:hover {
     color: #fff;
     transform: scale(1.7);
+}
+
+/* Model add products */
+.overlay-addProducts {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay-addProducts .model-addProducts {
+    width: 40%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    padding: 80px 50px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+.overlay-addProducts .model-addProducts select,
+.overlay-addProducts .model-addProducts input,
+.overlay-addProducts .model-addProducts button,
+.overlay-addProducts .model-addProducts label {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    height: 16%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 600;
+}
+.overlay-addProducts .model-addProducts input::placeholder {
+    color: var(--primary);
+}
+.overlay-addProducts .model-addProducts button {
+    border: 1px solid var(--primary);
+    border-radius: 30px;
+    padding: 15px;
+}
+.overlay-addProducts .model-addProducts button:hover{
+    background: linear-gradient(90deg, var(--primary), #9ff1e780);
+    color: #000;
+    border: 1px solid #fff;
+}
+/* Model Add Products */
+
+
+
+/* Model Update Products */
+.overlay-updateProducts {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay-updateProducts .model-updateProducts {
+    width: 40%;
+    height: 65%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    padding: 30px 50px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.overlay-updateProducts .model-updateProducts select,
+.overlay-updateProducts .model-updateProducts input,
+.overlay-updateProducts .model-updateProducts button,
+.overlay-updateProducts .model-updateProducts label,
+.overlay-updateProducts .model-updateProducts h1 {
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 600;
+}
+.overlay-updateProducts .model-updateProducts h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lobster Two', sans-serif;
+}
+.overlay-updateProducts .model-updateProducts input::placeholder {
+    color: var(--primary);
+}
+.overlay-updateProducts .model-updateProducts button {
+    border: 1px solid var(--primary);
+    border-radius: 30px;
+    padding: 15px;
+}
+.overlay-updateProducts .model-updateProducts button:hover{
+    background: linear-gradient(90deg, var(--primary), #9ff1e780);
+    color: #000;
+    border: 1px solid #fff;
+}
+/* Model Update Products */
+
+
+/* Model Order */
+.overlay-detailsProducts {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay-detailsProducts .details-titleProducts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.overlay-detailsProducts .details-titleProducts i,
+.overlay-detailsProducts .details-titleProducts h1 {
+    font-size: 90px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.overlay-detailsProducts .detailsProducts{
+    width: 70%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    padding: 30px 30px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.overlay-detailsProducts .detailsProducts li {
+    min-height: 20%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--primary);
+    border-radius: 30px;
+    color: var(--primary);
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    padding-right: 50px;
+}
+.overlay-detailsProducts .detailsProducts li img {
+    object-fit: cover;
+    height: 100%;
+    width: 25%;
+}
+.overlay-detailsProducts .detailsProducts li p {
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 40px;
+    text-transform: capitalize;
+    width: 25%;
+    text-align: center;
+}
+.overlay-detailsProducts .detailsProducts li span {
+    font-size: 40px;
+}
+
+
+
+.overlay-popUpOrder {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay-popUpOrder .popUpUpdateOrder {
+    width: 30%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    padding: 30px 50px;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.overlay-popUpOrder .popUpUpdateOrder input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: var(--primary);
+}
+.overlay-popUpOrder .popUpUpdateOrder select {
+    width: 70%;
+    padding: 10px 10px;
+    text-align: center;
+    color: var(--primary);
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--primary);
+}
+.overlay-popUpOrder .popUpUpdateOrder button {
+    width: 70%;
+    padding: 15px 10px;
+    text-align: center;
+    color: var(--primary);
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+}
+.overlay-popUpOrder .popUpUpdateOrder button:hover {
+    color: #000;
+    border: 1px solid #fff;
+    background: linear-gradient(90deg, #00ffee, #1ae6f87b)
+}
+/* Model Order */
+
+
+
+/* Disable */
+.opacity {
+    opacity: 0.3;
 }

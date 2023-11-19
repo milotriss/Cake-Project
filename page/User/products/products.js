@@ -5,18 +5,20 @@ function renderProducts() {
   let listCake = document.getElementById("products__items");
   listCake.innerHTML = "";
   dbProduct.forEach(function (item, index) {
-    listCake.innerHTML += `<figure>
-        <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
-        <figcaption>
-          <h1>${item.productName}</h1>
-          <p style="font-family: 'Lobster Two', sans-serif;">${(item.price).toLocaleString() + " VND"}</p>
-          <span>Stock: ${item.stock}</span>
-          <div class="details__add">
-            <button onclick="onAddCart(${item.id},${index})">ADD+</button>
-            <input value="1" min="1" max="${item.stock}" class="quantity-products" type="text" />
-          </div>
-        </figcaption>
-      </figure>`;
+    if (item.isDelete == 1) {
+      listCake.innerHTML += `<figure>
+          <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
+          <figcaption>
+            <h1>${item.productName}</h1>
+            <p style="font-family: 'Lobster Two', sans-serif;">${(item.price).toLocaleString() + " VND"}</p>
+            <span>Stock: ${item.stock}</span>
+            <div class="details__add">
+              <button onclick="onAddCart(${item.id},${index})">ADD+</button>
+              <input value="1" min="1" max="${item.stock}" class="quantity-products" type="text" />
+            </div>
+          </figcaption>
+        </figure>`;
+    }
   });
 }
 
@@ -46,18 +48,20 @@ function renderCategory(data) {
   let listCake = document.getElementById("products__items");
   listCake.innerHTML = "";
   category.forEach((item, index)=>{
-    listCake.innerHTML += `<figure>
-        <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
-        <figcaption>
-          <h1>${item.productName}</h1>
-          <p style="font-family: 'Lobster Two', sans-serif;">${(item.price).toLocaleString() + " VND"}</p>
-          <span>Con lai: ${item.stock}</span>
-          <div class="details__add">
-            <button onclick="onAddCart(${item.id},${index})">ADD+</button>
-            <input value="1" min="1" max="${item.stock}" class="quantity-products" type="text" />
-          </div>
-        </figcaption>
-      </figure>`;
+    if (item.isDelete == 1) {
+      listCake.innerHTML += `<figure>
+          <img onclick="renderDetails(${item.id})" src="../../${item.img}" alt="">
+          <figcaption>
+            <h1>${item.productName}</h1>
+            <p style="font-family: 'Lobster Two', sans-serif;">${(item.price).toLocaleString() + " VND"}</p>
+            <span>Con lai: ${item.stock}</span>
+            <div class="details__add">
+              <button onclick="onAddCart(${item.id},${index})">ADD+</button>
+              <input value="1" min="1" max="${item.stock}" class="quantity-products" type="text" />
+            </div>
+          </figcaption>
+        </figure>`;
+    }
   });
 }
 
@@ -70,11 +74,13 @@ function onSearch() {
     document.querySelector(".list-search").style.display = "block";
     listSearch.innerHTML = "";
     products.forEach((item) => {
-      listSearch.innerHTML += `
-      <li onclick="renderDetails(${item.id})">
-        <p>${item.productName}</p>
-      </li>
-      `;
+      if (item.isDelete == 1) {
+        listSearch.innerHTML += `
+        <li onclick="renderDetails(${item.id})">
+          <p>${item.productName}</p>
+        </li>
+        `;
+      }
     });
   } else {
     document.querySelector(".list-search").style.display = "none";

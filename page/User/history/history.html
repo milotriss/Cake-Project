@@ -24,8 +24,10 @@
     <main>
       <section class="history">
         <div class="history__title">
-          <i onclick="backHome()" class="ti-back-left"></i>
-          <h1>Your History</h1>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <i onclick="backHome()" class="ti-back-left"></i>
+            <h1>Your History</h1>
+          </div>
           <div class="search__order">
             <input value="" oninput="onSearchHistory()" placeholder="Search by Month" id="search__history" type="text">
             <ul class="search-order">
@@ -42,7 +44,7 @@
         </div>
         <ul class="popup__history">
         </ul>
-        <h2 class="order__total">totalprice</h2>
+        <h2 class="order__total"></h2>
       </div>
     </main>
     <script src="./history.js"></script>
