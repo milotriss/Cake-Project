@@ -23,42 +23,41 @@
     <div class="admin__overlay">
       <section id="admin__sidebar" class="sidebar">
         <section class="admin">
-          <figure class="admin__info">
-          </figure>
+          <figure class="admin__info"></figure>
         </section>
         <section class="sidebar__info">
           <ul>
             <li class="list-sidebar admin-active">
-                <i class="ti-view-grid"></i>
-                <span>Dashboard</span>
+              <i class="ti-view-grid"></i>
+              <span>Dashboard</span>
             </li>
             <li class="list-sidebar">
-                <i class="ti-user"></i>
-                <span>Users</span>
+              <i class="ti-user"></i>
+              <span>Users</span>
             </li>
             <li class="list-sidebar">
-                <i class="ti-dropbox"></i>
-                <span>Products</span>
+              <i class="ti-dropbox"></i>
+              <span>Products</span>
             </li>
             <li class="list-sidebar">
-                <i class="ti-receipt"></i>
-                <span>Orders</span>
+              <i class="ti-receipt"></i>
+              <span>Orders</span>
             </li>
             <li class="list-sidebar">
-                <i class="ti-comments"></i>
-                <span>Reviews</span>
+              <i class="ti-comments"></i>
+              <span>Reviews</span>
             </li>
             <li class="list-sidebar">
-                <i class="ti-image"></i>
-                <span>Banners</span>
+              <i class="ti-image"></i>
+              <span>Banners</span>
             </li>
             <li class="list-sidebar">
-                <i class="ti-receipt"></i>
-                <span>Vouchers</span>
+              <i class="ti-receipt"></i>
+              <span>Vouchers</span>
             </li>
             <li class="list-sidebar">
-                <i class="ti-settings"></i>
-                <span>Setting</span>
+              <i class="ti-settings"></i>
+              <span>Setting</span>
             </li>
           </ul>
         </section>
@@ -67,17 +66,26 @@
         <div class="revenue">
           <h1>Revenue</h1>
           <i class="fa-solid fa-money-bill-wheat"></i>
-          <p style="font-family: 'Lobster Two', sans-serif;" class="revenue-number"></p>
+          <p
+            style="font-family: 'Lobster Two', sans-serif"
+            class="revenue-number"
+          ></p>
         </div>
         <div class="products-db">
           <h1>Products</h1>
           <i class="fa-solid fa-clipboard-list"></i>
-          <p style="font-family: 'Lobster Two', sans-serif;" class="products-total"></p>
+          <p
+            style="font-family: 'Lobster Two', sans-serif"
+            class="products-total"
+          ></p>
         </div>
         <div class="users-db">
           <h1>Users</h1>
           <i class="fa-solid fa-user"></i>
-          <p style="font-family: 'Lobster Two', sans-serif;" class="users-total"></p>
+          <p
+            style="font-family: 'Lobster Two', sans-serif"
+            class="users-total"
+          ></p>
         </div>
         <div class="status__users">
           <h1>Statistics Of Users</h1>
@@ -105,17 +113,9 @@
                   <th>Action</th>
                 </tr>
               </thead>
-              <tbody id="list-users">
-              </tbody>
+              <tbody id="list-users"></tbody>
             </table>
-            <div class="pagination">
-              <i class="ti-angle-double-left"></i>
-              <i class="ti-angle-left"></i>
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <i class="ti-angle-right"></i>
-              <i class="ti-angle-double-right"></i>
+            <div id="paginationUser" class="pagination">
             </div>
           </section>
           <section class="admin__list">
@@ -169,42 +169,38 @@
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody id="list-products">
-            </tbody>
+            <tbody id="list-products"></tbody>
           </table>
-          <div class="pagination">
-            <i class="ti-angle-double-left"></i>
-            <i class="ti-angle-left"></i>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <i class="ti-angle-right"></i>
-            <i class="ti-angle-double-right"></i>
+          <div id="paginationProducts" class="pagination">
           </div>
           <div class="overlay-addProducts">
             <div class="model-addProducts">
-              <label style="cursor: pointer;" for="img-adminProducts">Chose Image
+              <label style="cursor: pointer" for="img-adminProducts"
+                >Chose Image
                 <i class="fa-regular fa-file-image"></i>
               </label>
-              <input style="display: none;"  id="img-adminProducts" type="file">
-              <select style="cursor: pointer;" id="category-adminProducts" >
+              <input style="display: none" id="img-adminProducts" type="file" />
+              <select style="cursor: pointer" id="category-adminProducts">
                 <option value="Category">Category</option>
-                <option value="Cake & Deserts">Cake & Deserts</option>›
+                <option value="Cake & Deserts">Cake & Deserts</option>
+                ›
                 <option value="Bread">Bread</option>
                 <option value="Burger & Pizza">Burger & Pizza</option>
                 <option value="Cookie & Biscuit">Cookie & Biscuit</option>
                 <option value="Donuts">Donuts</option>
               </select>
-              <input id="name-adminProducts" placeholder="Name products" type="text">
-              <input id="price-adminProducts" placeholder="Price" type="text">
-              <input id="stock-adminProducts" placeholder="Stock" type="text">
+              <input
+                id="name-adminProducts"
+                placeholder="Name products"
+                type="text"
+              />
+              <input id="price-adminProducts" placeholder="Price" type="text" />
+              <input id="stock-adminProducts" placeholder="Stock" type="text" />
               <button onclick="addProductsAdmin()">Add+</button>
               <button onclick="offAddProductsAdmin()">Esc</button>
             </div>
           </div>
-          <div class="overlay-updateProducts">
-            
-          </div>
+          <div class="overlay-updateProducts"></div>
         </section>
       </main>
       <main class="orders main-none">
@@ -225,17 +221,9 @@
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody id="list-orders">
-            </tbody>
+            <tbody id="list-orders"></tbody>
           </table>
-          <div class="pagination">
-            <i class="ti-angle-double-left"></i>
-            <i class="ti-angle-left"></i>
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <i class="ti-angle-right"></i>
-            <i class="ti-angle-double-right"></i>
+          <div id="paginationOrder" class="pagination">
           </div>
         </section>
         <div class="overlay-detailsProducts">
@@ -243,11 +231,9 @@
             <i class="ti-back-left"></i>
             <h1>Details</h1>
           </div>
-          <ul class="detailsProducts">
-          </ul>
+          <ul class="detailsProducts"></ul>
         </div>
-        <div class="overlay-popUpOrder">
-        </div>
+        <div class="overlay-popUpOrder"></div>
       </main>
       <main class="main-none"></main>
       <main class="main-none"></main>
@@ -260,12 +246,12 @@
     <script src="../admin-login/admin-login.js"></script>
     <script src="./admin.js"></script>
     <script>
-      renderInfoAdmin()
-      renderDashboard()
-      renderListOfUser()
-      renderListOfAdmin()
-      renderProductsAdmin()
-      renderOrderAdmin()
+      renderInfoAdmin();
+      renderDashboard();
+      renderListOfUser();
+      renderListOfAdmin();
+      renderProductsAdmin();
+      renderOrderAdmin();
     </script>
   </body>
 </html>

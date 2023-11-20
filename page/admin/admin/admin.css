@@ -766,7 +766,13 @@ body {
     transform: scale(1.5);
     color: #fff;
 }
-.pagination span {
+.pagination .page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.pagination .page span {
     cursor: pointer;
     font-size: 30px;
     padding: 0 20px;

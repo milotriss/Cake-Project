@@ -79,16 +79,22 @@ function renderDashboard() {
 
 // Users
 // Render User
-function renderListOfUser() {
+function renderListOfUser(page = 1) {
   let dbUserAdmin = JSON.parse(localStorage.getItem("users"));
   let listUser = document.getElementById("list-users");
 
   let newDbUserAdmin = dbUserAdmin.filter((item) => item.role == 2);
+  let currentPage = (page -1) * 3
+  let result = newDbUserAdmin.splice(currentPage,3)
   listUser.innerHTML = "";
-  newDbUserAdmin.forEach((item, index) => {
+  result.forEach((item, index) => {
     listUser.innerHTML += `
             <tr>
-                <td>${+[index] + +1}</td>
+                <td>${
+                  page === 1 ?
+                  `${index + 1} `
+                  : `${index  + 1 + 3 * (page -1)}`
+                }</td>
                 <td>${item.id}</td>
                 <td>${item.email}</td>
                 <td>${item.name}</td>
@@ -115,6 +121,34 @@ function renderListOfUser() {
             `;
   });
 }
+// Render number pagination 
+function renderPageUser(UserOnePage,totalUsers){
+  let result = Math.ceil(totalUsers/UserOnePage)
+  let numberList = document.getElementById('pageUser')
+  numberList.innerHTML = ""
+  for (let index = 1; index <= result; index++) {
+    numberList.innerHTML += 
+    `
+    <span onclick="renderListOfUser(${index})">${index}</span>
+    `
+  }
+}
+
+// Render list number pagination 
+function renderUiPageUser(){
+  let dbUserAdmin = JSON.parse(localStorage.getItem("users"));
+
+  let pagination = document.getElementById('paginationUser');
+  pagination.innerHTML = 
+  `
+    <div id="pageUser" class="page">    
+    </div>
+  `
+  let newDbUserAdmin = dbUserAdmin.filter((item) => item.role == 2);
+  renderPageUser(3,newDbUserAdmin.length)
+}
+renderUiPageUser()
+
 // Block
 function blockUser(id) {
   let dbUserAdmin = JSON.parse(localStorage.getItem("users"));
@@ -146,6 +180,15 @@ function changeToAdmin(id) {
   }
 }
 // Users
+
+
+
+
+
+
+
+
+
 
 // Admin
 //Render Admin
@@ -197,6 +240,13 @@ function unBlockAdmin(id) {
 }
 // Admin
 
+
+
+
+
+
+
+
 //  Products
 function renderStatusProducts(isDelete) {
   let result;
@@ -211,16 +261,21 @@ function renderStatusProducts(isDelete) {
   return result;
 }
 //Render Products
-function renderProductsAdmin() {
+function renderProductsAdmin(page = 1) {
   let dbProductsAdmin = JSON.parse(localStorage.getItem("products"));
   let listProducts = document.getElementById("list-products");
-
+  let currentPage = (page - 1) * 7
+  let result = dbProductsAdmin.splice(currentPage,7)
   listProducts.innerHTML = "";
 
-  dbProductsAdmin.forEach((item, index) => {
+  result.forEach((item, index) => {
     listProducts.innerHTML += `
         <tr class=${item.isDelete == 2 ? "opacity" : ""} id="c">
-            <td>${+[index] + +1}</td>
+            <td>${
+              page === 1 ?
+              `${index + 1} `
+              : `${index  + 1 + 7 * (page -1)}`
+            }</td>
             <td>${item.id}</td>
             <td><img src="../../../${item.img}"></td>
             <td>${item.productName}</td>
@@ -248,6 +303,36 @@ function renderProductsAdmin() {
         `;
   });
 }
+
+// Render number pagination 
+function renderPageProducts(productsOnePage,totalProducts){
+  let result = Math.ceil(totalProducts/productsOnePage)
+  let numberList = document.getElementById('pageProducts')
+  numberList.innerHTML = ""
+  for (let index = 1; index <= result; index++) {
+    numberList.innerHTML += 
+    `
+    <span onclick="renderProductsAdmin(${index})">${index}</span>
+    `
+  }
+}
+
+// Render list number pagination 
+function renderUiPageProducts(){
+  let dbProductsAdmin = JSON.parse(localStorage.getItem("products"));
+
+  let pagination = document.getElementById('paginationProducts');
+  pagination.innerHTML = 
+  `
+    
+    <div id="pageProducts" class="page">    
+    </div>
+  
+  `
+  renderPageProducts(7,dbProductsAdmin.length)
+}
+renderUiPageProducts()
+
 // Add products
 function openAddProductsAdmin() {
   document.querySelector(".overlay-addProducts").style.display = "flex";
@@ -393,6 +478,16 @@ function updateProductsAdmin(id) {
 // Update Products
 // Products
 
+
+
+
+
+
+
+
+
+
+
 // Orders
 // Render Orders
 function renderStatusOrders(statusOrder) {
@@ -413,14 +508,20 @@ function renderStatusOrders(statusOrder) {
   }
   return result;
 }
-function renderOrderAdmin() {
+function renderOrderAdmin(page = 1) {
   let dbOrderAdmin = JSON.parse(localStorage.getItem("orders"));
   let listOrder = document.getElementById("list-orders");
+  let currentPage = (page - 1) * 3
+  let result = dbOrderAdmin.splice(currentPage, 3)
   listOrder.innerHTML = "";
-  dbOrderAdmin.forEach((item, index) => {
+  result.forEach((item, index) => {
     listOrder.innerHTML += `
         <tr>
-            <td>${+[index] + +1}</td>
+            <td>${
+              page === 1 ?
+              `${index + 1} `
+              : `${(index  + 1 + 3) * (page -1)}`
+            }</td>
             <td>${item.date}</td>
             <td>${item.idUser}</td>
             <td>${item.phone}</td>
@@ -435,6 +536,35 @@ function renderOrderAdmin() {
             `;
   });
 }
+// Render number pagination 
+function renderPageOrder(OrderOnePage,totalOrder){
+  let result = Math.ceil(totalOrder/OrderOnePage)
+  let numberList = document.getElementById('pageOrder')
+  console.log(numberList);
+  numberList.innerHTML = ""
+  for (let index = 1; index <= result; index++) {
+    numberList.innerHTML += 
+    `
+    <span onclick="renderOrderAdmin(${index})">${index}</span>
+    `
+  }
+  console.log(numberList.innerHTML);
+}
+
+// Render list number pagination 
+function renderUiPageOrder(){
+  let dbOrderAdmin = JSON.parse(localStorage.getItem("orders"));
+
+  let pagination = document.querySelector('#paginationOrder');
+  console.log(pagination);
+  pagination.innerHTML =  `
+    <div id="pageOrder" class="page">    
+    </div>
+  `
+  renderPageOrder(3,dbOrderAdmin.length)
+}
+renderUiPageOrder()
+
 // Render details order
 function modelDetailOrder(id) {
   document.querySelector(".overlay-detailsProducts").style.display = "flex";
@@ -514,3 +644,5 @@ function updateOrder(id) {
   renderOrderAdmin()
 }
 // Order
+
+
