@@ -7,34 +7,34 @@ function renderMainSidebar() {
   <div class="nav__top">
     <ul>
       <li>
-        <a onclick="backHome()">
+        <button onclick="backHome()">
           <i class="fa-solid fa-house"></i>
           <span>Home</span>
-        </a>
+        </button>
       </li>
       <li>
-        <a href="./page/User/location/contact.html">
+        <button onclick="toLocation()">
           <i class="fa-solid fa-location-dot"></i>
           <span>Contact</span>
-        </a>
+        </button>
       </li>
       <li>
-        <a href="./page/User/products/products.html">
+        <button onclick="backShop()">
           <i class="fa-solid fa-store"></i>
-          <span onclick="backShop()">Shop</span>
-        </a>
+          <span >Shop</span>
+        </button>
       </li>
       <li>
-        <a>
+        <button>
           <i class="fa-solid fa-cake-candles"></i>
           <span>Event</span>
-        </a>
+        </button>
       </li>
       <li>
-        <a>
+        <button>
           <i class="fa-solid fa-shop"></i>
           <span>Workshop</span>
-        </a>
+        </button>
       </li>
     </ul>
   </div>
@@ -101,6 +101,9 @@ function backHistory(){
 }
 function goToCart(){
   window.location.href = "http://127.0.0.1:5501/page/user/cart/cart.html"
+}
+function toLocation(){
+  window.location.href = "http://127.0.0.1:5501/page/user/location/contact.html"
 }
 
 // active cho 3 cham //

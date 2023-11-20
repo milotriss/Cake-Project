@@ -743,6 +743,10 @@ body {
 .main-none.admin-active {
     display: grid;
 }
+.active-pagination {
+    color: #fff;
+    font-weight: 900;
+}
 /* Active */
 
 

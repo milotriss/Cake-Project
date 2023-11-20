@@ -1,3 +1,4 @@
+// Atice cho trang
 let liSideBar = document.querySelectorAll(".list-sidebar");
 let itemMain = document.querySelectorAll(".main-none");
 
@@ -26,6 +27,8 @@ function renderStatusUsers(status) {
   }
   return result;
 }
+
+
 
 // Render info admin
 function renderInfoAdmin() {
@@ -95,7 +98,6 @@ function renderListOfUser(page = 1) {
                   `${index + 1} `
                   : `${index  + 1 + 3 * (page -1)}`
                 }</td>
-                <td>${item.id}</td>
                 <td>${item.email}</td>
                 <td>${item.name}</td>
                 <td>${renderStatusUsers(item.status)}</td>
@@ -165,18 +167,20 @@ function unBlockUser(id) {
   localStorage.setItem("users", JSON.stringify(dbUserAdmin));
   renderListOfUser();
 }
-//
+// Change to Admin
 function changeToAdmin(id) {
   let dbUserAdmin = JSON.parse(localStorage.getItem("users"));
   let newDbUserAdmin = dbUserAdmin.find((item) => item.id == id);
   console.log(newDbUserAdmin);
-  if (newDbUserAdmin.status == 2) {
-    alert("This User has been BLOCKED!!!, remove block first");
-  } else {
-    newDbUserAdmin.role = 1;
-    localStorage.setItem("users", JSON.stringify(dbUserAdmin));
-    renderListOfUser();
-    renderListOfAdmin();
+  if (confirm('Are you SURE about that!!!')) {
+    if (newDbUserAdmin.status == 2) {
+      alert("This User has been BLOCKED!!!, remove block first");
+    } else {
+      newDbUserAdmin.role = 1;
+      localStorage.setItem("users", JSON.stringify(dbUserAdmin));
+      renderListOfUser();
+      renderListOfAdmin();
+    }
   }
 }
 // Users
@@ -202,7 +206,6 @@ function renderListOfAdmin() {
     listAdmin.innerHTML += `
             <tr>
                 <td>${+[index] + +1}</td>
-                <td>${item.id}</td>
                 <td>${item.email}</td>
                 <td>${item.name}</td>
                 <td>${renderStatusUsers(item.status)}</td>
@@ -276,7 +279,6 @@ function renderProductsAdmin(page = 1) {
               `${index + 1} `
               : `${index  + 1 + 7 * (page -1)}`
             }</td>
-            <td>${item.id}</td>
             <td><img src="../../../${item.img}"></td>
             <td>${item.productName}</td>
             <td>${item.price.toLocaleString() + " VND"}</td>
