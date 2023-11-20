@@ -131,7 +131,7 @@ function renderPageUser(UserOnePage,totalUsers){
   for (let index = 1; index <= result; index++) {
     numberList.innerHTML += 
     `
-    <span onclick="renderListOfUser(${index})">${index}</span>
+    <span onclick="renderListOfUser(${index})" class="spanActive">${index}</span>
     `
   }
 }
@@ -146,11 +146,20 @@ function renderUiPageUser(){
     <div id="pageUser" class="page">    
     </div>
   `
+
   let newDbUserAdmin = dbUserAdmin.filter((item) => item.role == 2);
   renderPageUser(3,newDbUserAdmin.length)
 }
 renderUiPageUser()
-
+const list = document.querySelectorAll(".spanActive");
+list.forEach((item) => {
+  item.addEventListener("click", function () {
+    list.forEach((item) => {
+    item.classList.remove("pageActive");
+  });
+  item.classList.add("pageActive");
+});
+});
 // Block
 function blockUser(id) {
   let dbUserAdmin = JSON.parse(localStorage.getItem("users"));

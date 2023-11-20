@@ -747,6 +747,10 @@ body {
     color: #fff;
     font-weight: 900;
 }
+.pageActive {
+    color: #fff;
+    font-size: 60px;
+}
 /* Active */
 
 

@@ -116,7 +116,7 @@ function onPopUpPayment(){
         alert('Enter complete information!')
         window.reload()
     } if (isNaN(phone) || phone.length != 9) {
-            alert('Your Phone number must number and shorter than 10 numbers!')
+            alert('Your Phone number is WRONG!')
             document.getElementById("phone").value = ""
             window.reload()
         }else{
